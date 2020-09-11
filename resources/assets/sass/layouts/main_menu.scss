@@ -1,0 +1,40 @@
+//убираем оформление ГЛОБАЛЬНОГО элемента li для главного меню
+.navbar-nav li {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style-image: none;
+}
+
+/*******************************************************************/
+.main-menu {
+  background-color: #f1f7f9;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 17px;
+  color: #002a35;
+}
+
+.navbar-nav .dropdown-menu a {
+  color: #002a35;
+}
+.navbar-nav .dropdown-menu a:hover {
+  color: #01aef2;
+}
+
+.navbar-nav .nav-item .nav-link{
+  font-weight: 700;
+}
+.navbar-nav .nav-item .nav-link:hover{
+  color: #01aef2;
+}
+
+.navbar .dropdown-menu a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+
+
+
+

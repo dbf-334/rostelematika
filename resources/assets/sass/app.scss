@@ -1,12 +1,15 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 //user font
 @import url(//fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext,cyrillic);
 @import url(//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic-ext,cyrillic);
+@import url(//fonts.googleapis.com/css?family=Fira+Sans+Regular:300,400,500,700&subset=cyrillic-ext,cyrillic);
 
-// Variables
+
+
+                                                                                               // Variables
 @import "variables";
 
 // Bootstrap
@@ -18,30 +21,33 @@
 /*** Общие стили для всех форм *********************************************/
 /***************************************************************************/
 body {
-  font-family: 'PT Sans Narrow', 'sans-serif';
-  background-color: #272b30;
-  font-size: 16px;
-  color: #aaaaaa;
+  font-family: 'Fira Sans', 'sans-serif';
+  background-color: #ffffff;
+  overflow-x: hidden !important;
+  font-size: 17px;
 }
 
 h1 {
-  color: #fff;
-  font-size: 36px;
-  margin: 0;
-  padding: 0;
+  color: #212121;
+  font-size: 42px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  //text-shadow: 0 2px 0 #777;
+}
+
+// заголовок H1 для мобильной версии меньшего размера
+.d-lg-none h1, .category-link-page h1 {
+  font-size: 34px;
 }
 
 h2 {
-  font-size: 32px;
-}
-h3 {
-  font-size: 28px;
-}
-h4 {
-  font-size: 24px;
-}
-h5 {
-  font-size: 20px;
+  color: #212121;
+  margin-top: 40px;
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 600;
+  margin-bottom: 26px;
 }
 
 .card {
@@ -70,23 +76,131 @@ h5 {
   left: 0;
   display: block;
   clear: both;
-  margin: 10px 0;
+  //margin: 10px 0;
   height: 12px;
-  border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+  border: 0; box-shadow: inset 0 12px 12px -12px rgba(150, 150, 150, 0.5);
 }
 
-//.card-body li {
-//  list-style-image: url(/img/main/foli.png);
-//}
-//
-//.main a {
-//  color: #E47B1D !important;
-//}
 
-li {
+/*ul{
+  list-style: none;
+  /*margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+ul li {
+  /*margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  line-height: 21px;
   list-style-image: url(/img/main/foli.png);
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  border: 1px solid #a1a19f;
+  border-radius: 2px;
+  //position: absolute;
+
+  //color: #01aef2;
+  position: relative;
+  font-size: 15px;
+  margin-right: 15px;
+}*/
+
+ol {
+  list-style-type: none;
+  counter-reset: num;
+  padding: 0;
 }
+ol li {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  line-height: 21px;
+}
+ol li::before {
+  content: counter(num);
+  counter-increment: num;
+  color: #FFF;
+  text-align: left;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #ff9900));
+  background-image: -webkit-linear-gradient(270deg, #ffcc00 0%, #ff9900 100%);
+  background-image: linear-gradient(180deg, #ffcc00 0%, #ff9900 100%);
+  border-radius: 50%;
+  margin-right: 8px;
+  padding: 2px 7px 3px;
+}
+
+//убираем оформление элемента li для карусели у слайдера
+.carousel-indicators li::before {
+  list-style: none;
+  background-image: none;
+}
+
+
 
 a {
-  color: #E47B1D;
+  color: #002a35;
 }
+
+a:hover {
+  color: #01aef2;
+}
+
+table.perechenTacho {
+  color: #000000;
+  background-color: #F6F6F6;
+  border-collapse: collapse;
+  border: 1px dotted #999999;
+}
+
+
+/* Оформление перечня оборудования для всех страниц *******************************************************************/
+.oboruds h2 a {
+  background-image: url(/img/main/strelka.png);
+  background-repeat: no-repeat;
+  background-position: 12px 18px;
+  padding-left: 51px;
+}
+
+.oboruds .card {
+  text-align: center;
+  width: 16rem;
+}
+.oboruds .card:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.oboruds .card .card-head a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.oboruds .card .card-body {
+  text-align: center;
+}
+
+.oboruds .card .liderProdagh {
+  width: 110px;
+  height: 112px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  background-image: url(/img/main/taho-lider.png);
+}
+
+.oboruds-pdf {
+  background-image: url(/img/main/bg-pdf.png);
+  vertical-align: top;
+  list-style-image: none;
+  background-repeat: no-repeat;
+  min-height: 26px;
+  padding-left: 38px;
+  padding-top: 5px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+
+

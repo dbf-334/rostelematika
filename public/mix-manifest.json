@@ -1,9 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/header.css": "/css/header.css",
-    "/css/left_menu.css": "/css/left_menu.css",
+    "/css/svg.css": "/css/svg.css",
+    "/css/up_menu.css": "/css/up_menu.css",
+    "/css/head.css": "/css/head.css",
+    "/css/main_menu.css": "/css/main_menu.css",
     "/css/modal-base-form.css": "/css/modal-base-form.css",
-    "/css/index.css": "/css/index.css",
-    "/css/sections.css": "/css/sections.css"
+    "/css/index.css": "/css/index.css"
 }

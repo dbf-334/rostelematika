@@ -16,8 +16,10 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 
 // Базовые секции для всех страниц
-mix.sass('resources/assets/sass/layouts/header.scss', 'public/css');
-mix.sass('resources/assets/sass/layouts/left_menu.scss', 'public/css');
+mix.sass('resources/assets/sass/layouts/svg.scss', 'public/css');           //стили иконок
+mix.sass('resources/assets/sass/layouts/up_menu.scss', 'public/css');
+mix.sass('resources/assets/sass/layouts/head.scss', 'public/css');
+mix.sass('resources/assets/sass/layouts/main_menu.scss', 'public/css');
 
 
 // Стили для модальных окон
@@ -26,5 +28,5 @@ mix.sass('resources/assets/sass/modals/modal-base-form.scss', 'public/css');
 
 // Стили для страниц
 mix.sass('resources/assets/sass/pages/index.scss', 'public/css');
-mix.sass('resources/assets/sass/pages/sections.scss', 'public/css');
+//mix.sass('resources/assets/sass/pages/sections.scss', 'public/css');
 

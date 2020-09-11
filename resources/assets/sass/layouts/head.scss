@@ -1,0 +1,365 @@
+/***************************************************************************************/
+header {
+  width: 100%;
+  position: relative;
+  line-height: 20px;
+  //height: 192px;
+  max-height: 360px;
+  font-size: 17px;
+  font-family: "Fira Sans",sans-serif;
+  color: #212121;
+  padding: 20px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+header .card {
+  border: 0;
+  height: 10rem;
+  background-color: transparent;
+  margin-top: 0;
+}
+header .card .card-body {
+  padding: 1.25rem .5rem;
+}
+
+header .header-logo {
+  width: 134px; //9rem;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+header .header-logo .card-body .logo {
+  position: absolute;
+  top: 24px;
+}
+/*header .header-logo .card-body .podpis {
+  color: #999;
+  position: absolute;
+  left: 3rem;
+  top: 105px;
+}*/
+
+
+/*******************************************************************/
+header .header-links {
+  width: 14rem;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+header .header-links .header_link{
+  justify-content: flex-start;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  outline: none !important;
+  height: 44px;
+  border: 1px solid #d7dfe2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 80px;
+  color: #212121;
+  text-decoration: none;
+}
+
+header .header-links .header_link:hover{
+  background-color: #01aef2;
+  border: 1px solid #01aef2;
+}
+header .header-links .header_link:hover span{
+  color: #ffffff;
+}
+header .header-links .header_link span{
+  font-size: 15px;
+  color: #212121;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 10px;
+}
+
+/*******************************************************************/
+header .header-contacts {
+  width: 270px; //17rem;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+header .header-contacts .header_contact{
+  margin-bottom: 8px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header .header-contacts .header_contact .contact_icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #d7dfe2;
+  color: #01aef2;
+
+}
+
+
+header .header-contacts .header_contact .contact_content {
+  padding-left: 11px;
+  width: calc(100% - 44px);
+  //padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+header .header-contacts .header_contact .contact_content .contact_title {
+  font-size: 16px;
+  color: #9fa5a8;
+  font-weight: 700;
+}
+header .header-contacts .header_contact .contact_content .contact_text {
+  font-size: 16px;
+}
+header .header-contacts .header_contact .contact_content .contact_text a {
+  color: #212121;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+header .header-contacts .header_contact .contact_content .contact_text a:hover {
+  color: #f93446;
+}
+
+
+
+
+header .header-contacts .header_contact .contact_content .cities {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+header .header-contacts .header_contact .contact_content .cities .locality {
+  color: #01aef2;
+  border-bottom-width: 2px;
+  border-bottom-style: dotted;
+  display: block;
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  position: absolute;
+  left: 64px;
+  text-shadow: 0 1px 0 #fff;
+}
+header .header-contacts .header_contact .contact_content .cities .locality:hover{
+  color: #f93446;
+  text-decoration: none;
+}
+
+
+/******************************************************************/
+header .header-cities {
+  width: 280px; //18rem;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  //float: left;
+}
+
+header .header_feedback {
+  width: 18rem;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+header .header_feedback .feedback_phone {
+  font-size: 30px;
+}
+header .header_feedback .feedback_phone i {
+  margin-right: 8px;
+}
+header .header_feedback .feedback_phone div{
+  margin-bottom: 15px;
+}
+
+header .header_feedback .feedback_time {
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-family: "Fira Sans",sans-serif;
+  color: #212121;
+  margin-top: 10px;
+  text-align: center;
+}
+
+header .header_feedback .feedback_btns{
+  //align-items: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+}
+
+header .header_feedback .feedback_btns .feedback_callback {
+  width: 180px;
+  margin-right: 10px;
+  outline: none !important;
+  font-size: 15px;
+  height: 35px;
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+  background-color: #f93446;
+  border: 2px solid #f93446;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Sans",sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 80px;
+  text-decoration: none;
+}
+
+header .header_feedback .feedback_btns .feedback_callback:hover{
+  background-color: #d73446;
+  border: 2px solid #d73446;
+}
+
+header .header_feedback .feedback_btns .feedback_messagers div{
+  float: left;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+}
+
+
+//540
+@media screen and (max-width: 992px) {
+  .header-links {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-links {
+    display: block;
+  }
+  .header {
+    max-width: 390px;
+  }
+  .row {
+    height: 32rem;
+  }
+}
+
+/*
+  header .header-cities .card-body .cities .grafik {
+    color: #797979;
+    left: 64px;
+    position: absolute;
+    top: 81px;
+  }
+
+  header .header-contact {
+    width: 16rem;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+  }
+  header .header-contact .card-body .tel {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+  }
+  header .header-contact .card-body .tel .free {
+    color: #666666;
+    margin-bottom: 3px;
+    font-style: normal;
+    word-spacing: 1px;
+  }
+  header .header-contact .card-body .tel address {
+    color: #333333;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 18px;
+  }
+  header .header-contact .card-body .messengers-head {
+    top: 20px;
+    left: 1rem;
+  }
+*/
+
+  /************************************************************/
+  /* Оформление мессенджеров для HEAD и FOOTER */
+  /************************************************************/
+  /*.messengers-head {
+    width: 40px;
+    top: 40px;
+    position: relative;
+    left: 30px;
+  }
+
+  .messengers .btn {
+    border: 0;
+    -webkit-appearance: none;
+  }
+
+  .messengers .viber {
+    background: url(/img/main/btn-viber-gray.png) no-repeat 0px 0px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+  }
+  .messengers .telegram {
+    background: url(/img/main/btn-telegram-gray.png) no-repeat 0px 0px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+  }
+  .messengers .whatsapp {
+    background: url(/img/main/btn-wathapp-gray.png) no-repeat 0px 0px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+  }
+
+  .messengers .viber:hover {
+    background: url(/img/main/btn-viber.png) no-repeat 0px 0px;
+  }
+  .messengers .telegram:hover {
+    background: url(/img/main/btn-telegram.png) no-repeat 0px 0px;
+  }
+  .messengers .whatsapp:hover {
+    background: url(/img/main/btn-wathapp.png) no-repeat 0px 0px;
+  }*/
+
+
+
+

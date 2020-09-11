@@ -7,6 +7,7 @@ use App\Models\Page;
 use App\Models\Units;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Domain;
 
 
 class PagesController extends Controller
@@ -20,25 +21,19 @@ class PagesController extends Controller
         return view('pages.one-link-page.'.$page->url, ['page'=>$page, 'searchResult'=>$searchResult]);
     }
 
-    public function turn()
-    {
-        return view('pages.one-link-page.turn');
-    }
 
-    public function robot()
-    {
-        return view('pages.one-link-page.robot');
-    }
 
-    public function index()
+    public function index($d)
     {
+        //dd($d);
         $page=Page::find(1);
+        $domain = Domain::init($d);
 
         return view('pages.index.index', ['page'=>$page]);
     }
 
 
-    public function category_pages($category, $url)
+    /*public function category_pages($category, $url)
     {
         $category=Category::where('url','=',$category)->first();
         $page=Page::where([
@@ -56,10 +51,10 @@ class PagesController extends Controller
             return view('pages.category-link-page.'.$page->url, ['page'=>$page], ['category'=>$category]);
         }
 
-    }
+    }*/
 
 
-    public function category_units($id)
+    /*public function category_units($id)
     {
         $units=Units::where('id','=',$id)->first();
 
@@ -67,11 +62,17 @@ class PagesController extends Controller
 
         //выводим простую страницу из БД
         return view('pages.category-link-page.base-units-page', ['units'=>$units]);
-    }
+    }*/
 
 
-    public function first_pages($url, Request $request){
-        $page=Page::where('url','=',$url)->first();
+    public function first_pages($d, $url, Request $request){
+        $domain = Domain::init($d);
+        //dd($d);
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+        //dd($page);
+
+        //$page=Page::where('url','=',$url)->first();
+
 
         if ($page->lendos == '0') {
             //выводим простую страницу из БД
@@ -79,10 +80,17 @@ class PagesController extends Controller
         }
         else {
             //загружаем лендос
-            return view('pages.one-link-page.' . $page->url, ['page' => $page]);
+            return view('pages.one-link-page.' . $url, ['page' => $page]);
         }
     }
 
 
+    // Раздел - УСЛУГИ /////////////////////////////////////////////////////////////////////////////////////
+    public function services($d, $url, Request $request){
 
+        $domain = Domain::init($d);
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.services.' . $url, ['page' => $page]);
+    }
 }

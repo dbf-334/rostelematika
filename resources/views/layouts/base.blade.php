@@ -8,24 +8,29 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{$page->title}}</title>
+    <title>{{$page->title}} {{$domain->postfix1}}</title>
+    <meta name="description" content="{{$page->description}} {{$domain->postfix2}}">
     <meta charset="utf-8">
-    <meta name="author" content="d-devices.com">
+    <meta name="author" content="Ростелематика | www.ros-telematika.ru">
+
+    <meta name="app_domain" content="{{$domain->domain}}.ros-telematika.ru">
 
 
 
-    <!-- Styles -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!--link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet"-->
+
+    <!-- Базовые стили -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/left_menu.css') }}" rel="stylesheet">
+    <!-- Стили структуры шаблона -->
+    <link href="{{ mix('/css/svg.css') }}" rel="stylesheet">            <!-- стили SVG иконок -->
+    <link href="{{ mix('/css/up_menu.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/head.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/main_menu.css') }}" rel="stylesheet">
 
     {{-- стили модальных окон --}}
     <link href="{{ mix('/css/modal-base-form.css') }}" rel="stylesheet">
-
-    {{--различные иконки fontawesome--}}
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-
 
 
     @stack('css')
@@ -34,15 +39,21 @@
 </head>
 <body>
     <div id="app">
+        {{-- мобильное меню ------------------------------------------}}
+        @include('layouts.mobile_menu')
+        {{-- верхнее меню ------------------------------------------}}
+        @include('layouts.up_menu')
         {{-- заголовок страниц ------------------------------------------}}
-        @include('layouts.header')
-        {{-- боковое меню ------------------------------------------}}
-        @include('layouts.left_menu')
+        @include('layouts.head')
+        {{-- основное меню ------------------------------------------}}
+        @include('layouts.main_menu')
 
-            @include('modals.section')
-            @include('modals.work-group')
-            @include('modals.search')
-            @include('modals.future')
+        {{-- боковое меню ------------------------------------------}}
+        {{--@include('layouts.left_menu')--}}
+
+            @include('modals.all_city')
+            @include('modals.policy')
+
 
         {{--данные страницы--}}
         @yield('content')
