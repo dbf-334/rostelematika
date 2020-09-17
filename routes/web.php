@@ -16,14 +16,12 @@ Auth::routes();
 
 
 
-Route::post('/search', 'PagesController@search');
-Route::get('/turn.php', 'PagesController@turn');
-Route::get('/robot.php', 'PagesController@robot');
 
 
 
 //Route::group(['domain' => '{domain}.' . env('APP_DOMAIN', 'ros-telematika.test')], function() {
 Route::domain('{domain}.ros-telematika.test') ->group( function($domain) {
+
     Route::get('/', 'PagesController@index');
     Route::get('/{url}.html', 'PagesController@first_pages');
     Route::get('/{url}', 'PagesController@first_pages');    //главные страницы разделов (услуги, решения и т.д.)

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/***********************************************************/
+
+/*** Стоимость установки ГЛОНАСС. Готовые решения **********/
+
+/***********************************************************/
+
+#sec_services {
+  background-color: #f1f7f9;
+}
+
+#sec_services .row {
+  height: auto;
+}
+
+#sec_services .container {
+  max-width: 1230px;
+}
+
+#sec_services .b2-box-1 {
+  width: 565px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+#sec_services .b2-box-2 {
+  width: 270px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+#sec_services .b2-group-box {
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#sec_services .card {
+  height: 360px;
+  z-index: 1;
+  color: #fff;
+  float: left;
+  overflow: hidden;
+}
+
+#sec_services .card .card-img {
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#sec_services .card:hover .card-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#sec_services .card .card-body {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#sec_services .b2-head a {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+#sec_services .i-mid {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#sec_services .i-mid .catalog__btn {
+  color: #fff;
+  width: 140px;
+  margin-right: 10px;
+  border-color: rgba(255, 255, 255, 0.3);
+  outline: none !important;
+}
+
+#sec_services .i-mid .btn_small {
+  font-size: 15px;
+  height: 38px;
+}
+
+#sec_services .i-mid .btn_italic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+#sec_services .i-mid .btn_border-gray {
+  border: 1px solid #d7dfe2;
+}
+
+#sec_services .i-mid .btn_border-red {
+  border: 2px solid #f93446;
+}
+
+#sec_services .i-mid .btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 80px;
+}
+
+#sec_services .i-mid a {
+  text-decoration: none;
+}
+
+#sec_services .i-mid .b2-small {
+  width: 38px;
+}
+
+#sec_services .i-mid .btn_hover-bg-blue:hover {
+  color: #fff;
+  border-color: #01aef2;
+  background-color: #01aef2;
+}
+
+#sec_services .i-mid .btn_bg-red {
+  color: #fff;
+  background-color: #f93446;
+}
+
+#sec_services .i-mid .btn_bg-red:hover {
+  border-color: #da061a;
+  background-color: #da061a;
+}
+
+@media screen and (max-width: 992px) {
+  #sec_services .container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sec_services .card {
+    width: 100%;
+  }
+
+  #sec_services .b2-group-box {
+    width: 100%;
+  }
+}
+

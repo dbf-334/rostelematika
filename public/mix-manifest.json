@@ -1,10 +1,13 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/svg.css": "/css/svg.css",
-    "/css/up_menu.css": "/css/up_menu.css",
-    "/css/head.css": "/css/head.css",
-    "/css/main_menu.css": "/css/main_menu.css",
+    "/css/sec_portfolio.css": "/css/sec_portfolio.css",
+    "/css/sec_clients.css": "/css/sec_clients.css",
+    "/css/sec_steps.css": "/css/sec_steps.css",
+    "/css/sec_commerce.css": "/css/sec_commerce.css",
+    "/css/sec_raskhodi.css": "/css/sec_raskhodi.css",
+    "/css/sec_services.css": "/css/sec_services.css",
+    "/css/sec_advantages.css": "/css/sec_advantages.css",
     "/css/modal-base-form.css": "/css/modal-base-form.css",
     "/css/index.css": "/css/index.css"
 }

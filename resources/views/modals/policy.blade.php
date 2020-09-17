@@ -1,36 +1,22 @@
-{{--иньекция для выборки данных из БД
-@inject('tbl_domain', 'App\Models\Domain')--}}
 
-<style>
-    /*корректировка стилей для данного модального окна*/
-    .modal-base-form .modal-dialog {
-        width: auto;
-        max-width: 80%;
-    }
-</style>
+{{--модальное окно политики конфиденциальности--}}
 
-
-{{--модальное окно выбора городов--}}
-<div class="modal fade modal-base-form" id="modal-policy" tabindex="-1" role="dialog" aria-labelledby="ModalPolicy" aria-hidden="true">
+<div class="modal fade modal-base-form" id="modal-policy" tabindex="-1" role="dialog" aria-labelledby="exampleModalPolicy" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
-                <div class="modal-title w-100 text-center" id="ModalPolicy">Политика конфиденциальности</div>
+                <h3 class="modal-title w-100 text-center" id="exampleModalPolicy">Политика конфиденциальности</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-line">
-                <div class="box1"></div>
-                <div class="box2"></div>
-            </div>
 
-            <div class="modal-body p-3">
+            <div class="modal-body">
                 <p>Пользователь, оставляя заявку на интернет-сайте <strong>{{$domain->domain}}.ros-telematika.ru</strong>,
                     принимает настоящее Согласие на обработку персональных данных (далее &mdash; Согласие). Действуя свободно,
                     своей волей и в своем интересе, а также подтверждая свою дееспособность. Пользователь дает свое согласие
-                    <strong>ООО РТС(ИНН 2635229823)</strong> далее Компания, которая расположена по адресу
+                    <strong>ООО РТС (ИНН 2635229823)</strong> далее Компания, которая расположена по адресу
                     <strong>355003 Ставропольский край Ставрополь, пр-т Кулакова 12Б</strong>
                     на обработку своих персональных данных со следующими условиями:</p>
                 &nbsp;

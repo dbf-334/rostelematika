@@ -8,8 +8,9 @@
     <!--nav class="navbar navbar-expand-md navbar-primary navbar-toggleable"
     style="font-size: 16px; font-weight: bold; letter-spacing: 0.01em; padding-left: 0;"  -->
     <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-            <!--span class="navbar-toggler-icon">*</span-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1"
+                aria-expanded="false" aria-label="Toggle navigation">
+
             <i class="svg-icon icon-menu"></i>
         </button>
 
@@ -18,21 +19,6 @@
         <div class="collapse navbar-collapse" id="navbar1">
             <ul class="navbar-nav mr-auto">
 
-                {{--ГОРОДА (для перехода по ним в мобильной версии) --------------------------------------------------}}
-                {{--<div class="d-block d-lg-none">
-                    <li class="nav-item bord dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menu_resheniya" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Выбрать город:</small><br>
-                            <span class="text-warning">{{ app('global')['GLB_CITY_NAME'] }}</span>
-                        </a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="menu_resheniya">--}}
-                            {{--формируем список городов--}}
-            {{--@foreach($tbl_city::orderBy('name', 'asc')->get() as $city_item)
-                <a class="dropdown-item"  href="/contacts/scity/{{$city_item->name}}">{{$city_item->name}}</a>
-            @endforeach
-            </div>
-        </li>
-    </div>--}}
 
                 {{--Главная----------------------------------------------------------------------------------------}}
                 <li class="nav-item">
@@ -96,8 +82,6 @@
             </ul>
         </div>
 
-        {{--правое мобильное меню--}}
-        {{--@include('layouts.mobile_right_menu')--}}
 
 
 

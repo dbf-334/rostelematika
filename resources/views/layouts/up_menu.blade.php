@@ -21,9 +21,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/guarantees.html">Гарантии</a>
-                        <!--a class="nav-link" href="/services/monitoring-transporta.html">Гарантии</a-->
                     </li>
-                </ul> {{-- mr-auto--}}
+                </ul>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -38,13 +37,13 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link up-menu-icon" target="_blank"
-                           href="https://vk.com/rostelematika">
+                           href="{{ app('global')['vk_url'] }}">
                             <i class="svg-icon icon-vk-gray"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link up-menu-icon" target="_blank"
-                           href="https://www.instagram.com/rostelematika/">
+                           href="{{ app('global')['instagram_url'] }}">
                             <i class="svg-icon icon-instagram-gray"></i>
                         </a>
                     </li>

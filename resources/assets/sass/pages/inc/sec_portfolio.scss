@@ -1,0 +1,149 @@
+/*************************************************************************/
+/*  Секция - Портфолио (Примеры внедрения и отзывы наших клиентов)   */
+/*************************************************************************/
+#sec_portfolio h2 {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sec_portfolio .carousel .carousel-inner .carousel-item .portfolio-box {
+  padding-left: 16px;
+  padding-right: 36px;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data, .portfolio__review {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review {
+  background-color: #f1f7f9;
+  border-radius: 3px;
+}
+
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data .card-body .portfolio__logo {
+  border: 1px solid #d7dfe2;
+  width: 240px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  margin-bottom: 26px;
+}
+
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data .card-body .portfolio__company {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data .card-body .portfolio__text {
+  line-height: 26px;
+}
+
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__text {
+  font-size: 16px;
+  line-height: 26px;
+  font-style: italic;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__text::before {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 30px;
+  background: url("/img/section/portfolio/commans.png") no-repeat center;
+  margin-bottom: 20px;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data {
+  margin-top: 21px;
+  align-items: center;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data .review__img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  float: left;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data .review__img img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data .review__persona {
+  width: calc(100% - 68px);
+  padding-left: 20px;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data .review__name {
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+}
+#sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review .card-body .review__data .review__position {
+  font-size: 15px;
+  color: #959b9f;
+}
+
+#sec_portfolio .carousel .carousel-control-prev,
+#sec_portfolio .carousel .carousel-control-next {
+  height: 36px;
+  width: 36px;
+  opacity: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#sec_portfolio .carousel .carousel-control-prev {
+  left: -3rem;
+}
+#sec_portfolio .carousel .carousel-control-next {
+  right: -3rem;
+}
+
+#sec_portfolio .carousel .carousel-control-prev i:hover {
+  background-image: url(/img/svg/arrow-left-red.svg);
+}
+
+#sec_portfolio .carousel .carousel-control-next i:hover {
+  background-image: url(/img/svg/arrow-right-red.svg);
+}
+
+@media screen and (max-width: 768px) {
+  #sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__data,
+  #sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review {
+    width: 100%;
+  }
+  #sec_portfolio .carousel .carousel-inner .carousel-item .portfolio-box .row {
+    height: auto;
+  }
+  #sec_portfolio .carousel .carousel-inner .carousel-item .portfolio-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #sec_portfolio .carousel .carousel-inner .carousel-item .row .portfolio__review {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #sec_portfolio .carousel .carousel-control-prev {
+    left: 0;
+  }
+  #sec_portfolio .carousel .carousel-control-next {
+    right: 0;
+  }
+  #sec_portfolio .carousel .carousel-control-prev,
+  #sec_portfolio .carousel .carousel-control-next {
+    margin-top: -35px;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+

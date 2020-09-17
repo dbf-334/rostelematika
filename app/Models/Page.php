@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
+    /**
+     * не используем даты в этой модели
+     * @var bool
+     */
+    public $timestamps = false;
+
     protected $table ='pages';
 }
 

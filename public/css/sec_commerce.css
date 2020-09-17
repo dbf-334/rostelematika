@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/*************************************************************************/
+
+/*  Форма захвата - Получить коммерческое предложение  */
+
+/*************************************************************************/
+
+#sec_commerce {
+  color: #fff;
+  background-image: url("/img/section/commerce/contact_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#sec_commerce .container div h2 {
+  color: #fff;
+  text-align: left;
+  max-width: 370px;
+  margin-bottom: 40px;
+  line-height: 40px;
+}
+
+#sec_commerce .ts__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .kp__input .input__wrap {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .input_border-gray .input__wrap {
+  border: 1px solid #d7dfe2;
+  border-radius: 50px;
+  height: 54px;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 500;
+}
+
+#sec_commerce .container .kp__form div .form__policy {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#sec_commerce .container .kp__form div .form__policy a {
+  color: #01aef2;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .kp__btn {
+  width: 100%;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn_large {
+  font-size: 18px;
+  height: 56px;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn_italic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn_bg-red {
+  color: #fff;
+  background-color: #f93446;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn_border-red {
+  border: 2px solid #f93446;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  font-family: "Fira Sans",sans-serif;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 80px;
+}
+
+#sec_commerce .container .kp__form .ts__row div .kp__row div .btn_bg-red:hover {
+  border-color: #da061a;
+  background-color: #da061a;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #sec_commerce .container {
+    width: 90%;
+  }
+
+  #sec_commerce .container div h2 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

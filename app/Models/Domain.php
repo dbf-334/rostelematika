@@ -26,22 +26,15 @@ class Domain extends Model
 
         //Привязываем существующий экземпляр объекта к контейнеру
         //https://laravel.ru/docs/v5/container
-        app()->instance('domain', $domain);
+        //app()->instance('domain', $domain);
 
         //помещаем $domain во все шаблоны
         view()->share('domain', $domain);
+
         //помещаем $domains во все шаблоны
-        view()->share('domains', self::orderBy('name')->get());
+        //view()->share('domains', self::orderBy('name')->get());
 
-        return $domain;
+        //return $domain;
     }
 
-
-    /**
-     * Получаем несуществующее поле phone
-     */
-    public function getPhoneAttribute()
-    {
-        return $this->tel;
-    }
 }

@@ -1,30 +1,36 @@
 
-// Fonts
-//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-//user font
-@import url(//fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext,cyrillic);
-@import url(//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic-ext,cyrillic);
-@import url(//fonts.googleapis.com/css?family=Fira+Sans+Regular:300,400,500,700&subset=cyrillic-ext,cyrillic);
+//user font - почему-то не работают при импорте )))
+//@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
 
 
+// Variables
+//@import "variables";
 
-                                                                                               // Variables
-@import "variables";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Базовые секции для всех страниц
+@import 'resources/assets/sass/layouts/svg.scss';           //стили иконок
+@import 'resources/assets/sass/layouts/head.scss';
+@import 'resources/assets/sass/layouts/up_menu.scss';
+@import 'resources/assets/sass/layouts/head.scss';
+@import 'resources/assets/sass/layouts/main_menu.scss';
+@import 'resources/assets/sass/layouts/footer.scss';
+
 
 
 
 /***************************************************************************/
 /*** Общие стили для всех форм *********************************************/
 /***************************************************************************/
+
 body {
-  font-family: 'Fira Sans', 'sans-serif';
-  background-color: #ffffff;
-  overflow-x: hidden !important;
   font-size: 17px;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #ffffff;
+  //overflow-x: hidden !important;
 }
 
 h1 {
@@ -33,22 +39,36 @@ h1 {
   margin-bottom: .5rem;
   font-weight: 500;
   line-height: 1.2;
-  //text-shadow: 0 2px 0 #777;
 }
-
 // заголовок H1 для мобильной версии меньшего размера
-.d-lg-none h1, .category-link-page h1 {
+/*.d-lg-none h1, .category-link-page h1 {
   font-size: 34px;
-}
+}*/
 
 h2 {
   color: #212121;
   margin-top: 40px;
   font-size: 30px;
   line-height: normal;
-  font-weight: 600;
+  //font-weight: 700;
   margin-bottom: 26px;
 }
+// заголовок H2 для мобильной версии меньшего размера
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+
+// убираем голубую подсветку на нажатых кнопках
+.btn:focus, .btn.focus, input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 
 .card {
   margin-top: 20px;
@@ -57,6 +77,7 @@ h2 {
   margin-left: auto;
 }
 
+// различные тени под блоками
 .my_hr1::after {
   content: '';
   position: absolute;
@@ -108,35 +129,6 @@ ul li {
   margin-right: 15px;
 }*/
 
-ol {
-  list-style-type: none;
-  counter-reset: num;
-  padding: 0;
-}
-ol li {
-  margin-top: 12px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  line-height: 21px;
-}
-ol li::before {
-  content: counter(num);
-  counter-increment: num;
-  color: #FFF;
-  text-align: left;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #ff9900));
-  background-image: -webkit-linear-gradient(270deg, #ffcc00 0%, #ff9900 100%);
-  background-image: linear-gradient(180deg, #ffcc00 0%, #ff9900 100%);
-  border-radius: 50%;
-  margin-right: 8px;
-  padding: 2px 7px 3px;
-}
-
-//убираем оформление элемента li для карусели у слайдера
-.carousel-indicators li::before {
-  list-style: none;
-  background-image: none;
-}
 
 
 
@@ -148,59 +140,44 @@ a:hover {
   color: #01aef2;
 }
 
-table.perechenTacho {
-  color: #000000;
-  background-color: #F6F6F6;
-  border-collapse: collapse;
-  border: 1px dotted #999999;
+
+
+
+// анимация кнопок -------------------------------------------------------------------------------------------
+.btn_animate{
+  overflow:hidden;
+  position:relative;
+}
+.btn_animate:after{
+  content:"";height:200px;width:250px;top:-20px;left:-140px;display:block;position:absolute;background:#fff;border-radius:100%;
+  -moz-transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);-o-transform:scale(0);transform:scale(0);
+  webkit-animation:ripple 2s linear infinite;-moz-animation:ripple 2s linear infinite;-ms-animation:ripple 2s linear infinite;
+  -o-animation:ripple 2s linear infinite;animation:ripple 2s linear infinite;z-index:20}
+
+@-webkit-keyframes ripple{
+  20%{
+    opacity:0;
+    -moz-transform:scale(2.5);
+    -ms-transform:scale(2.5);
+    -webkit-transform:scale(2.5);
+    -o-transform:scale(2.5);
+    transform:scale(2.5);
+  }
+  100%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5);
+  }
 }
 
-
-/* Оформление перечня оборудования для всех страниц *******************************************************************/
-.oboruds h2 a {
-  background-image: url(/img/main/strelka.png);
-  background-repeat: no-repeat;
-  background-position: 12px 18px;
-  padding-left: 51px;
+@-moz-keyframes ripple{
+  20%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
+  100%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
 }
 
-.oboruds .card {
-  text-align: center;
-  width: 16rem;
-}
-.oboruds .card:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+@-o-keyframes ripple{
+  20%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
+  100%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
 }
 
-.oboruds .card .card-head a:hover {
-  text-decoration: none;
-  cursor: pointer;
+@keyframes ripple{
+  20%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
+  100%{opacity:0;-moz-transform:scale(2.5);-ms-transform:scale(2.5);-webkit-transform:scale(2.5);-o-transform:scale(2.5);transform:scale(2.5)}
 }
-
-.oboruds .card .card-body {
-  text-align: center;
-}
-
-.oboruds .card .liderProdagh {
-  width: 110px;
-  height: 112px;
-  position: absolute;
-  right: -3px;
-  top: -3px;
-  background-image: url(/img/main/taho-lider.png);
-}
-
-.oboruds-pdf {
-  background-image: url(/img/main/bg-pdf.png);
-  vertical-align: top;
-  list-style-image: none;
-  background-repeat: no-repeat;
-  min-height: 26px;
-  padding-left: 38px;
-  padding-top: 5px;
-  margin: 15px 0;
-  width: 100%;
-}
-
-
-

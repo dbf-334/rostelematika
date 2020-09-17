@@ -3,6 +3,14 @@
 
 @section('to_header')
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+
+    <link href="{{ mix('/css/sec_portfolio.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_raskhodi.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_services.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_advantages.css') }}" rel="stylesheet">
 @endsection
 
 
@@ -12,7 +20,7 @@
 
         {{-- главный слайдер + форма захвата --}}
         <div class="main-slide">
-            <div class="container case">
+            <div class="container">
 
                 <div class="main-slide__wrap">
 
@@ -53,7 +61,6 @@
                         <div class="form__foot">
                             <div class="form__policy policy">
                                 Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных в соответствии с
-                                <!--a data-fancybox="" data-src="#popup-policy" href="javascript:;">Политикой конфиденциальности</a-->
                                 <a class="locality modal-show"
                                    data-toggle="modal"
                                    data-target="#modal-policy">
@@ -68,226 +75,166 @@
             </div>
         </div>
 
-        {{-- 1-блок -------------------------------------------------------------------}}
-        <div class="block-1">
-        <div class="row w-100 ">
 
-            <div class="b1-image"></div>
+        {{-- Инфо-блок - Спутниковая система Глонасс --}}
+        @include('pages.inc.sec_advantages')
 
-            <div class="card b1-text">
+        {{-- Стоимость установки ГЛОНАСС. Готовые решения --}}
+        @include('pages.inc.sec_services')
 
-                    <div class="card">
-                        <div class="card-body">
-                            <h2>Спутниковая система Глонасс мониторинга позовляет в режиме реального времени получать
-                                полную информацию о работе корпоративного парка ТС.</h2>
-                            <p>Она одинаково эффективно применяется на легковых и грузовых автомобилях. автобусах. спецтехнике,
-                                водном и воздушном транспорте. При небольшой цене ГЛОНАСС, установка оборудования позволяет
-                                оптимизировать расходы компании.</p>
-                        </div>
-                    </div>
-
-                    <div class="card b1-icon">
-                        <div class="card-body">
-                            <i class="svg-icon icon-certificate"></i>
-                            <div>Пожизненная гарантия на оборудование</div>
-                        </div>
-                    </div>
-                    <div class="card b1-icon">
-                        <div class="card-body">
-                            <i class="svg-icon icon-search-user"></i>
-                            <div>Максимально прозрачный контроль</div>
-                        </div>
-                    </div>
-                    <div class="card b1-icon">
-                        <div class="card-body">
-                            <i class="svg-icon icon-time-24-7"></i>
-                            <div>Сервис 48 часов. Все вопросы решаем за 2 суток</div>
-                        </div>
-                    </div>
-                    <div class="card b1-icon">
-                        <div class="card-body">
-                            <i class="svg-icon icon-finance"></i>
-                            <div>Экономите &gt;5%  на содержание ТС или мы вернем деньги</div>
-                        </div>
-                    </div>
-
-            </div>
-        </div>
-        </div>
-
-        {{-- 2-блок -------------------------------------------------------------------}}
-        <div class="block-2 pb-5">
-            <div class="container">
-                <h2 class="text-center text-center pt-5 pb-3 m-0">Стоимость установки ГЛОНАСС. <br>Готовые решения</h2>
-
-                <div class="row w-100">
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-1">
-                            <div class="card-img" style="background-image: url('/img/main/1.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/gruzoviki.html" title="Грузовики">Грузовой транспорт</a>
-                                </div>
-                                <p>Получайте информацию о местоположении и скорости движения автомобиля.</p>
-                                <div class="i-mid">
-                                    <a href="/catalog/gruzoviki.html"
-                                       class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-2">
-                            <div class="card-img" style="background-image: url('/img/main/2.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/specz-texnika.html" title="Спец. техника">Спец. техника</a>
-                                </div>
-                                <p>Узнайте больше о работе машины и установленного на ней оборудования.</p>
-                                <div class="i-mid">
-                                    <a href="/catalog/specz-texnika.html"
-                                       class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card b2-box-2">
-                            <div class="card-img" style="background-image: url('/img/main/3.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/toplivozapravshhiki.html" title="Топливозаправщики">Топливозаправщики</a>
-                                </div>
-                                <p>Получайте точные данные об уровне топлива как в бензобаке, так и в цистерне.</p>
-                                <div class="i-mid">
-                                    <a href="/catalog/toplivozapravshhiki.html"
-                                       class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-1">
-                            <div class="card-img" style="background-image: url('/img/main/4.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/traktoryi-i-sx-texnika.html" title="Сельхоз техника">Сельхоз техника</a>
-                                </div>
-                                <p>Сократите расходы, установив на ТС функцию параллельного вождения.</p>
-                                <div class="i-mid">
-                                    <a href="/catalog/traktoryi-i-sx-texnika.html"
-                                       class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-1">
-                            <div class="card-img" style="background-image: url('/img/main/5.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/vozdushnyij-transport.html" title="Воздушный транспорт">Воздушный транспорт</a>
-                                </div>
-                                <p>Узнайте о маршрутах движения самолетов и вертолетов.</p>
-                                <div class="i-mid">
-                                    <a href="/catalog/vozdushnyij-transport.html"
-                                       class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-2">
-                            <div class="card-img" style="background-image: url('/img/main/6.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/taksi.html" title="Такси">Такси</a>
-                                </div>
-                                <p>Убедитесь, что водители соблюдают скоростной режим и используют ТС по назначению. </p>
-                                <div class="i-mid">
-                                    <a href="/catalog/taksi.html"
-                                       class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card b2-box-2">
-                            <div class="card-img" style="background-image: url('/img/main/7.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/poezda.html" title="Поезда">Поезда</a>
-                                </div>
-                                <p></p>
-                                <div class="i-mid">
-                                    <a href="/catalog/poezda.html"
-                                       class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="b2-group-box">
-                        <div class="card b2-box-1">
-                            <div class="card-img" style="background-image: url('/img/main/8.jpg');"></div>
-                            <div class="card-body">
-                                <div class="b2-head">
-                                    <a href="/catalog/legkovoj-transport.html" title="Легковой транспорт">Легковой транспорт</a>
-                                </div>
-                                <p>Сократите расходы на обслуживание легкового автопарка. </p>
-                                <div class="i-mid">
-                                    <a href="/catalog/legkovoj-transport.html"
-                                       class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                                    <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                                       class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
 
 
         {{-- Калькулятор -------------------------------------------------------------------}}
         <div class="block-calculator pb-5">
-            <div class="container">
+            <div class="container bg-success">
                 <!--h2 class="text-center text-center pt-5 pb-3 m-0">Давайте рассчитаем эффективность внедрения наших решений?</h2-->
-
-                <div id="calc">
-                    <!--example-component>*</example-component-->
-                    <vue-calc>ops</vue-calc>
-                </div>
-
-
+                   Здесь будет калькулятор
 
             </div>
         </div>
 
 
+        {{-- Сокращение расходов и гибкая логистика --}}
+        @include('pages.inc.sec_raskhodi')
 
-        <div class="row">
-            <h2>qwer</h2>
+
+        {{-- Как работает система -------------------------------------------------------------------}}
+        <div class="row h-auto">
+            <div class="container px-5">
+                <h2 class="text-center">Как работает система</h2>
+                <p>Это глобальная система, которая использует не только наземные, но и космические станции позиционирования.
+                    При ее работе трекер определяет точные координаты авто, основываясь на положении спутников. Полученные
+                    данные применяются для расчета скорости, маршрута движения и т.д. (при монтаже соответствующих датчиков,
+                    трекер также может собирать информацию о расходе топлива и работе агрегатов).</p>
+                <p>Информация передается на серверы с помощью стандарта GSM (именно он является основным стандартом сотовой
+                    связи, поэтому устройство способно работать по всей зоне покрытия операторов). Уже отсюда данные выводятся
+                    пользователю онлайн. Удобнее всего для этого использовать специальное программное обеспечение на компьютере.
+                    Однако, при необходимости, сделать запрос можно и посредством СМС-сообщения.</p>
+            </div>
         </div>
+
+
+        {{-- 4-блок -------------------------------------------------------------------}}
+        <div class="block-4 pb-5">
+            <div class="container">
+                <h2 class="text-center">Часто задаваемые вопросы</h2>
+
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                                <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Как купить систему ГЛОНАСС?
+                                    <div class="ml-auto"><i class="svg-icon icon-down-arrow"></i></div>
+                                </button>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Чтобы приобрести устройство контроля и отслеживания автомобилей, достаточно оставить заявку
+                                удобным для вас способом. Наши сотрудники свяжутся с Вами для уточнения деталей покупки. После
+                                заключения договора и оплаты достаточно дождаться выезда монтажника на объект. Специалист проведет
+                                установку всех элементов и обучение персонала. Далее наша компания будет оказывать полное информационное
+                                и техническое сопровождение продукта.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Где лучше установить ГЛОНАСС на автомобиль?
+                                    <div class="ml-auto"><i class="svg-icon icon-down-arrow"></i></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <p><span style="text-transform: capitalize">{{$domain->postfix3}}</span> установку комплекса для контроллинга
+                                    автотранспорта выполняет компания Ростелематика. Мы предоставляем пожизненную гарантию на оборудование и
+                                    предлагаем техническую поддержку {{$domain->work}}.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Как работает ГЛОНАСС в автомобиле?
+                                    <div class="ml-auto"><i class="svg-icon icon-down-arrow"></i></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Основное назначение систем мониторинга транспорта - определение местоположения ТС (погрешность
+                                    измерений не превышает 3-4 м и с каждым годом только сокращается). Для этого на автомобиль
+                                    устанавливается трекер, который, собирая данные со спутника, передает их на серверы. Пользователь
+                                    может получать информацию на ПО (например, через платформу Wialon) или на мобильный в виде СМС.</p>
+                                <p>Существенно расширить функциональность системы позволяет установка дополнительного оборудования.
+                                    С его помощью пользователь может получать информацию об уровне топлива, показаниях тахографа и т.д.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    На какие автомобили устанавливается система мониторинга?
+                                    <div class="ml-auto"><i class="svg-icon icon-down-arrow"></i></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Оборудование для мониторинга может устанавливаться на любые виды транспортных средств. В частности, это может быть:</p>
+                                <ul>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Спецтехника;
+                                    </li>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Грузовые ТС;
+                                    </li>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Легковые автомобили;
+                                    </li>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Пассажирский;
+                                    </li>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Сельскохозяйственное оборудование;
+                                    </li>
+                                    <li>
+                                        <i class="svg-icon icon-tick"></i>
+                                        Такси.
+                                    </li>
+                                </ul>
+                                <p>Кроме того, оборудование можно устанавливать на многие виды водного и воздушного транспорта.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        {{-- Примеры внедрения и отзывы --}}
+        @include('pages.inc.sec_portfolio')
+
+        {{-- Примеры внедрения и отзывы --}}
+        @include('pages.inc.sec_clients')
+
+        {{-- Этапы работ --}}
+        @include('pages.inc.sec_steps')
+
+        {{-- Форма захвата - Получить коммерческое предложение --}}
+        @include('pages.inc.sec_commerce')
+
 
     </div>
 @endsection

@@ -35,12 +35,6 @@ header .header-logo .card-body .logo {
   position: absolute;
   top: 24px;
 }
-/*header .header-logo .card-body .podpis {
-  color: #999;
-  position: absolute;
-  left: 3rem;
-  top: 105px;
-}*/
 
 
 /*******************************************************************/
@@ -225,7 +219,7 @@ header .header_feedback .feedback_btns .feedback_callback {
   font-size: 15px;
   height: 35px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
   background-color: #f93446;
   border: 2px solid #f93446;
@@ -254,7 +248,7 @@ header .header_feedback .feedback_btns .feedback_messagers div{
 }
 
 
-//540
+
 @media screen and (max-width: 992px) {
   .header-links {
     display: none;
@@ -271,95 +265,4 @@ header .header_feedback .feedback_btns .feedback_messagers div{
     height: 32rem;
   }
 }
-
-/*
-  header .header-cities .card-body .cities .grafik {
-    color: #797979;
-    left: 64px;
-    position: absolute;
-    top: 81px;
-  }
-
-  header .header-contact {
-    width: 16rem;
-    flex-direction: column;
-    display: flex;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: left;
-  }
-  header .header-contact .card-body .tel {
-    position: absolute;
-    right: 0px;
-    top: 35px;
-  }
-  header .header-contact .card-body .tel .free {
-    color: #666666;
-    margin-bottom: 3px;
-    font-style: normal;
-    word-spacing: 1px;
-  }
-  header .header-contact .card-body .tel address {
-    color: #333333;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 18px;
-  }
-  header .header-contact .card-body .messengers-head {
-    top: 20px;
-    left: 1rem;
-  }
-*/
-
-  /************************************************************/
-  /* Оформление мессенджеров для HEAD и FOOTER */
-  /************************************************************/
-  /*.messengers-head {
-    width: 40px;
-    top: 40px;
-    position: relative;
-    left: 30px;
-  }
-
-  .messengers .btn {
-    border: 0;
-    -webkit-appearance: none;
-  }
-
-  .messengers .viber {
-    background: url(/img/main/btn-viber-gray.png) no-repeat 0px 0px;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-  }
-  .messengers .telegram {
-    background: url(/img/main/btn-telegram-gray.png) no-repeat 0px 0px;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-  }
-  .messengers .whatsapp {
-    background: url(/img/main/btn-wathapp-gray.png) no-repeat 0px 0px;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-  }
-
-  .messengers .viber:hover {
-    background: url(/img/main/btn-viber.png) no-repeat 0px 0px;
-  }
-  .messengers .telegram:hover {
-    background: url(/img/main/btn-telegram.png) no-repeat 0px 0px;
-  }
-  .messengers .whatsapp:hover {
-    background: url(/img/main/btn-wathapp.png) no-repeat 0px 0px;
-  }*/
-
-
-
 
