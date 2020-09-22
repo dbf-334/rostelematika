@@ -29,6 +29,7 @@ mix.sass('resources/assets/sass/layouts/footer.scss', 'public/css');*/
     mix.sass('resources/assets/sass/pages/inc/sec_raskhodi.scss', 'public/css');
     mix.sass('resources/assets/sass/pages/inc/sec_services.scss', 'public/css');
     mix.sass('resources/assets/sass/pages/inc/sec_advantages.scss', 'public/css');
+    mix.sass('resources/assets/sass/pages/inc/sec_calculator.scss', 'public/css');
 
 
 // Стили для модальных окон

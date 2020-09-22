@@ -1,10 +1,10 @@
 
-{{-- Содержимое почтового шаблона CALLBAK/Обратный звонок --}}
+{{-- Содержимое почтового шаблона TESTDRIVE/Тест-драйв --}}
 @extends('email.layout.base_system')
 
 
 @section('mail_title')
-    <h1 style="margin: 0;">Необходимо перезвонить клиенту</h1>
+    <h1 style="margin: 0;">Клиент заказал бесплатный тест-драйв</h1>
 @endsection
 
 
@@ -15,8 +15,9 @@
             <td style="padding: 30px 0;">
                 <p>
                     Клиент <span style="font-weight: bold; color: #2a7298;">{{request()->name}}</span>
-                    заказал обратный звонок на номер
-                    <span style="font-weight: bold; color: #2a7298;">{{request()->phone}}</span>.
+                    номер  <span style="font-weight: bold; color: #2a7298;">{{request()->phone}}</span>
+                    хочет попробовать бесплатный тест-драйв (на 7 дней)
+                    <span style="font-weight: bold; color: #2a7298;">{{request()->comment}}</span>.
                 </p>
                 <p>
                     Заявка была сделана со страницы:

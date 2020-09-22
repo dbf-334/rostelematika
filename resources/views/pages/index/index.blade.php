@@ -1,9 +1,18 @@
 @extends('layouts.base')
 
 
+
+@section('meta_name_robots')
+    <meta name="robots" content="index, follow"/>
+@endsection
+
+
+
 @section('to_header')
+    {{-- Базовые стили текущей страницы --}}
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 
+    {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
     <link href="{{ mix('/css/sec_portfolio.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
@@ -16,6 +25,10 @@
 
 
 @section('content')
+    {{-- Подключаем только те модальные окна,
+    которые будут использоваться на данной странице --}}
+    @include('modals.compred')
+
     <div class="page-index">
 
         {{-- главный слайдер + форма захвата --}}
@@ -44,28 +57,35 @@
                     <div class="main-slide__desc">бесплатно на 7 дней</div>
                     <div class="main-slide__form form">
 
-                        <form action="" method="post" class="ajax_form form__body row">
+                        <form id="test_drive_form" class="ajax_form form__body row">
+                            {{ csrf_field() }}
                             <div class="form__input input input_border-gray input_large">
-                                <label class="input__title" for="input-1">Ваше имя</label>
-                                <input type="text" class="input__wrap" name="name" placeholder="Иван" id="input-1">
+                                <label class="input__title">Ваше имя</label>
+                                <input type="text" class="input__wrap" name="name" placeholder="Иван">
                             </div>
                             <div class="form__input input input_border-gray input_large input_phone">
-                                <label class="input__title" for="input-2">телефон</label>
-                                <input type="tel" class="input__wrap" name="tel" placeholder="+7 (   )" maxlength="18" id="input-2">
+                                <label class="input__title">телефон</label>
+                                <input type="text" class="input__wrap" name="phone" placeholder="Телефон" maxlength="18">
                             </div>
-                            <button class="form__btn btn btn_bg-red btn_border-red btn_uppercase btn_large btn_animate">Попробовать</button>
 
+                            {{--указываем тип заявки--}}
+                            <input type="hidden" name="type_order" value="TESTDRIVE">
+                            {{--комментарий к заявке--}}
+                            <input type="hidden" name="comment" value="{{ $page->h1 }}">
+                            {{--указываем с какой страницы была вызвана форма--}}
+                            <input type="hidden" name="url" value="{{$domain->domain}}.ros-telematika.test{{request()->getPathInfo()}}">
 
-                            <input type="hidden" name="af_action" value="c869cdf324ff15410ed451a08f993359">
+                            <div onclick="sendOrder('test_drive')"
+                                 class="form__btn btn btn_bg-red btn_border-red btn_uppercase btn_large btn_animate">Попробовать</div>
                         </form>
+
                         <div class="form__foot">
                             <div class="form__policy policy">
-                                Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных в соответствии с
+                                <div id="result_send_order_test_drive" class="result_send_order"></div>
+                                Нажимая кнопку «Попробовать», вы даете согласие на обработку персональных данных в соответствии с
                                 <a class="locality modal-show"
                                    data-toggle="modal"
-                                   data-target="#modal-policy">
-                                    Политикой конфиденциальности
-                                </a>
+                                   data-target="#modal-policy">Политикой конфиденциальности</a>
                             </div>
                         </div>
                     </div>

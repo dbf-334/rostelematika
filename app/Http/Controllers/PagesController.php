@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Page;
-use App\Models\Units;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Domain;
@@ -44,7 +42,6 @@ class PagesController extends Controller
 
         return view('pages.one-link-page.'.$page->url, ['page'=>$page, 'searchResult'=>$searchResult]);
     }*/
-
 
 
     public function index($d)

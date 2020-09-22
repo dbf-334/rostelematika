@@ -27,7 +27,7 @@ class SendOrderRequest extends FormRequest
         return [
             //если полей в форме нет то и не делаем никакой вилдации
             'name' => $this->exists('name') ? 'required|min:3' : '',
-            'phone' => $this->exists('phone') ? 'required|min:5' : '',
+            'phone' => $this->exists('phone') ? 'required|min:6' : '',
             'city' => $this->exists('city') ? 'required' : '',
             'email' => $this->exists('email') ? 'required|email' : '',
             'timecall' => $this->exists('timecall') ? 'required' : '',
@@ -47,11 +47,11 @@ class SendOrderRequest extends FormRequest
     {
         return [
             'name.required' => 'Пожалуйста, впишите Имя!',
-            'name.min' => 'Имя должно быть не менее :min-х симв.',
+            'name.min' => 'Имя должно быть не менее :min-х символов.',
             'email.required' => 'Пожалуйста, впишите адрес электронной почты!',
             'email.email' => 'Не правильный формат электронной почты!',
             'phone.required' => 'Укажите номер телефона!',
-            'phone.min' => 'Телефон должен быть не менее :min-х симв.',
+            'phone.min' => 'Телефон должен быть не менее :min-ти символов.',
             'timecall.required' => 'Когда Вам можно позвонить?',
             'city.required' => 'Откуда Вы? - Укажите населеный пункт!',
             'type_partner.required' => 'Пожалуйста, выберете вариант сотрудничества',

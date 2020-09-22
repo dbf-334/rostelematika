@@ -18,8 +18,12 @@
                         <div class="i-mid">
                             <a href="/catalog/gruzoviki.html"
                                class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Грузовой транспорт"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -36,8 +40,12 @@
                         <div class="i-mid">
                             <a href="/catalog/specz-texnika.html"
                                class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Спец. техника"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -52,8 +60,12 @@
                         <div class="i-mid">
                             <a href="/catalog/toplivozapravshhiki.html"
                                class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Топливозаправщики"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -70,8 +82,12 @@
                         <div class="i-mid">
                             <a href="/catalog/traktoryi-i-sx-texnika.html"
                                class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Сельхоз техника"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -88,8 +104,12 @@
                         <div class="i-mid">
                             <a href="/catalog/vozdushnyij-transport.html"
                                class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Воздушный транспорт"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -106,8 +126,12 @@
                         <div class="i-mid">
                             <a href="/catalog/taksi.html"
                                class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Такси"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -122,8 +146,12 @@
                         <div class="i-mid">
                             <a href="/catalog/poezda.html"
                                class="b2-small catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">...</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Поезда"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -140,8 +168,12 @@
                         <div class="i-mid">
                             <a href="/catalog/legkovoj-transport.html"
                                class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
-                            <a data-fancybox="" data-src="#popup-kp" href="javascript:;"
-                               class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
+                            <a class="catalog__btn btn btn_bg-red btn_border-red btn_italic btn_small"
+                               data-theme="Легковой транспорт"
+                               data-toggle="modal"
+                               data-target="#modal_compred">
+                                Получить КП
+                            </a>
                         </div>
                     </div>
                 </div>
