@@ -1,0 +1,317 @@
+
+//--------------------------------------------------------------------------
+// Анимация круга
+//--------------------------------------------------------------------------
+.block-7 .container .card .circliful {
+  position: relative;
+}
+.block-7 .container .card .circle-text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+}
+
+.block-7 {
+  background-color: #f1f7f9;
+}
+.block-7 .container .card {
+  width: 22%;
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.block-7 .container .card .card-img {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  float: left;
+  margin-right: 8px;
+}
+.block-7 .container .card .card-body {
+  width: 10rem;
+  padding: 0;
+  float: left;
+  font-size: 16px;
+  //font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .block-7 .container .card {
+    width: 45%;
+  }
+  .block-7 .container .card .card-body {
+    width: 20rem;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .block-7 .container .card .card-body {
+    width: 14rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block-7 .container .card {
+    width: 100%;
+  }
+  .block-7 .container .card .card-body {
+    width: 20rem;
+  }
+}
+
+
+
+
+
+
+//--------------------------------------------------------------------------
+.block-1 .card {
+  border: none;
+}
+
+.block-1 .laptop {
+  background-image: url('/img/pages/gruzoviki/s1200.jpg');
+  background-size: contain;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.block-1 .bodytext {
+  padding-right: 8%;
+  width: 50%;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  .block-1 .laptop {
+    width: 30%;
+  }
+  .block-1 .bodytext {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-1 .bodytext {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .block-1 .laptop {
+    width: 50%;
+    height: 200px;
+  }
+  .block-1 .bodytext {
+    width: 90%;
+  }
+}
+
+
+//--------------------------------------------------------------------------
+.block-2 .card {
+  border: none;
+  background-color: transparent;
+}
+
+.block-2 .equipment {
+  background-image: url('/img/pages/reshenie-dlya-marshrutnogo-transporta/table-hands.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.block-2 .bodytext {
+  width: 50%;
+}
+
+.block-2 .bodytext .card-body h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.block-2 .bodytext .card-body #accordion .card .card-header .btn {
+  color: #01aef2;
+}
+.block-2 .bodytext .card-body #accordion .card {
+  border-bottom: 1px solid #cdcdcd;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+
+.block-2 .bodytext .card-body #accordion .card .card-header {
+  background: transparent;
+  border: none;
+}
+.block-2 .bodytext .card-body #accordion .card .card-header button {
+  font-size: 22px;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  color: #212121;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+}
+.block-2 .bodytext .card-body #accordion .card .card-header .btn div {
+  float: right;
+}
+
+
+@media screen and (max-width: 992px) {
+  .block-2 .equipment {
+    width: 35%;
+    background-size: contain;
+  }
+  .block-2 .bodytext {
+    width: 60%;
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-2 .equipment {
+    width: 100%;
+    height: 270px;
+  }
+  .block-2 .bodytext {
+    padding: 0;
+    width: 90%;
+  }
+}
+
+
+//---------------------------------------------------------------------------------
+.block-8 {
+  background-color: #f1f7f9;
+}
+.block-8 .card {
+  background-color: transparent;
+  border: none;
+}
+.block-8 .container .text_box {
+  width: 50%;
+}
+.block-8 .container .text_box .card .card-img {
+  padding: 0;
+  margin-right: 30px;
+  float: left;
+  width: 75px;
+  height: 75px;
+}
+.block-8 .container .text_box .card .card-body {
+  padding: 0;
+  float: left;
+  width: calc(100% - 120px);
+}
+.block-8 .container .text_box .card {
+  display: block;
+  width: 100%;
+}
+.block-8 .container .equipment {
+  width: 50%;
+  height: 500px;
+}
+.block-8 .container .equipment .card-img {
+  background-image: url('/img/pages/reshenie-dlya-marshrutnogo-transporta/left-bus-banner.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 100%;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .block-8 .container .text_box {
+    width: 100%;
+  }
+  .block-8 .container .equipment {
+    width: 100%;
+  }
+}
+
+
+
+//---------------------------------------------------------------------------------
+.block-9 .container .card {
+  width: 33%;
+  text-align: center;
+  border: none;
+}
+.block-9 .container .card .card-img {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.block-9 .container .card .pic1 {
+  background-image: url('/img/pages/reshenie-dlya-marshrutnogo-transporta/user-1.jpg');
+}
+.block-9 .container .card .pic2 {
+  background-image: url('/img/pages/reshenie-dlya-marshrutnogo-transporta/user-2.jpg');
+}
+.block-9 .container .card .pic3 {
+  background-image: url('/img/pages/reshenie-dlya-marshrutnogo-transporta/user-3.jpg');
+}
+
+@media screen and (max-width: 768px) {
+  .block-9 .container .card {
+    width: 100%;
+  }
+}
+
+
+//---------------------------------------------------------------------------------
+.block-10 .container .card {
+  width: 25%;
+  border: none;
+}
+.block-10 .container .card .card-img .img {
+  float: left;
+  padding-right: 10px;
+}
+.block-10 .container .card .card-img .text {
+  float: left;
+  font-size: 18px;
+  color: #01aef2;
+  line-height: 1.2em;
+  width: calc(100% - 100px);
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .block-10 .container .card {
+    width: 50%;
+  }
+  .block-10 .container .card .card-img .text {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .block-10 .container .card {
+    width: 100%;
+  }
+}
+
+

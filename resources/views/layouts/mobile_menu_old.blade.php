@@ -16,24 +16,6 @@
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav mr-auto">
 
-                    {{--ГОРОДА (для перехода по ним в мобильной версии) --------------------------------------------------}}
-                    {{--<div class="d-block d-lg-none">
-                        <li class="nav-item bord dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="select_domains" role="button" data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
-                                <small>Выбрать город:</small><br>
-                                <span class="text-warning">{{$domain->name}}</span>
-                            </a>
-                            <div class="dropdown-menu bg-white text-dark" aria-labelledby="select_domains">
-                                <!-- формируем список городов -->
-                                @foreach(\App\Models\Domain::orderBy('name', 'asc')->get() as $domain_item)
-                                    <a class="dropdown-item"  href="//{{$domain_item->domain}}.ros-telematika.test{{request()->getPathInfo()}}">
-                                        {{$domain_item->name}}
-                                    </a>
-                                @endforeach
-                            </div>
-                        </li>
-                    </div>--}}
 
                     {{--Главная----------------------------------------------------------------------------------------}}
                     <li class="nav-item">
@@ -69,7 +51,7 @@
                             <a class="dropdown-item"  href="/catalog/reshenie-dlya-agrobiznesov.html">Решение для агробизнеса</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"  href="/catalog/taksi.html">Такси</a>
-                            <a class="dropdown-item"  href="/catalog/tmonitoring-obshchestvennogo-transporta.html">Общественный транспорт</a>
+                            <a class="dropdown-item"  href="/catalog/monitoring-obshchestvennogo-transporta.html">Общественный транспорт</a>
                             <a class="dropdown-item"  href="/catalog/reshenie-dlya-marshrutnogo-transporta.html">Маршрутный транспорт</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"  href="/catalog/specz-texnika.html">Спец. техника</a>
@@ -78,10 +60,15 @@
                             <a class="dropdown-item"  href="/catalog/vozdushnyij-transport.html">Воздушный транспорт</a>
                             <a class="dropdown-item"  href="/catalog/poezda.html">Поезда</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item"  href="/catalog/personalnyiĭ-monitoring.html">Персональный мониторинг</a>
+                            <a class="dropdown-item"  href="/catalog/personalnyii-monitoring.html">Персональный мониторинг</a>
                             <a class="dropdown-item"  href="/catalog/logisticheskoe-reshenie-logistics.html">Логистическое решение Logistics</a>
 
                         </div>
+                    </li>
+
+                    {{-- Оборудование ---------------------------------------------------------------------------------}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/oborudovanie">Оборудование</a>
                     </li>
 
                     {{-- О компании ---------------------------------------------------------------------------------}}

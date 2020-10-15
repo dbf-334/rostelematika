@@ -1,0 +1,123 @@
+
+//--------------------------------------------------------------------------
+.page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .card {
+  border: none;
+}
+
+.page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .laptop {
+  background-image: url('/img/pages/sistemyi-videonablyudeniya-dlya-transporta/0_124755_8b0bdff5_orig.jpg');
+  background-size: contain;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .bodytext {
+  padding-left: 5%;
+  width: 50%;
+}
+
+.page-sistemyi-videonablyudeniya-dlya-transporta .block-1 h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 992px) {
+  .page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .laptop {
+    width: 30%;
+  }
+  .page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .bodytext {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .bodytext {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .laptop {
+    width: 50%;
+    height: 200px;
+  }
+  .page-sistemyi-videonablyudeniya-dlya-transporta .block-1 .bodytext {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------
+.block-3 {
+  background-color: #f1f7f9;
+  text-align: center;
+}
+.block-3 .row {
+  height: auto;
+}
+
+.block-3 .container .row .card {
+  border: none;
+  width: 14rem;
+  float: left;
+  background: transparent;
+}
+.block-3 .container .row .card .card-body {
+  padding-bottom: 0;
+}
+
+.block-3 .b3-head {
+  font-size: 42px;
+  color: #f93446;
+  margin-bottom: 30px;
+}
+.block-3 .container .row .card .card-body p {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .block-3 .container .row .card {
+    width: 16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block-3 .container .row .card {
+    width: 100%;
+  }
+}
+
+
+
+
+//----------------------------------------------------------------------------
+.page-sistemyi-videonablyudeniya-dlya-transporta .block-5 h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

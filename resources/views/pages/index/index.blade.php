@@ -13,13 +13,21 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 
     {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
+    <link href="{{ mix('css/sec_main_slide.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_portfolio.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_raskhodi.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_services.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/sec_advantages.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/sec_calculator.css') }}" rel="stylesheet">
+
+@endsection
+
+
+
+@section('to_footer')
+    <script src="{{ asset('js/sec_calculator.js') }}"></script>
 @endsection
 
 
@@ -32,68 +40,11 @@
     <div class="page-index">
 
         {{-- главный слайдер + форма захвата --}}
-        <div class="main-slide">
-            <div class="container">
-
-                <div class="main-slide__wrap">
-
-                    <div class="main-slide__title main-title">
-                        <h1 class="text-dark">{{ $page->h1 }} {{$domain->postfix3}}</h1>
-                    </div>
-                    <ul class="main-slide__offer d-none d-md-block">
-                        <li class="main-slide__offer__item">
-                            <i class="svg-icon icon-tick"></i><p>Вы оставляете заявку</p>
-                        </li><li class="main-slide__offer__item">
-                            <i class="svg-icon icon-tick"></i><p>Мы бесплатно устанавливаем систему мониторинга на 1 ТС</p>
-                        </li><li class="main-slide__offer__item">
-                            <i class="svg-icon icon-tick"></i><p>Обучаем и консультируем по всем вопросам</p>
-                        </li><li class="main-slide__offer__item">
-                            <i class="svg-icon icon-tick"></i><p>Вы видите результат экономии, благодаря нашей системе</p>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="main-slide__bottom">
-                    <div class="main-slide__desc">бесплатно на 7 дней</div>
-                    <div class="main-slide__form form">
-
-                        <form id="test_drive_form" class="ajax_form form__body row">
-                            {{ csrf_field() }}
-                            <div class="form__input input input_border-gray input_large">
-                                <label class="input__title">Ваше имя</label>
-                                <input type="text" class="input__wrap" name="name" placeholder="Иван">
-                            </div>
-                            <div class="form__input input input_border-gray input_large input_phone">
-                                <label class="input__title">телефон</label>
-                                <input type="text" class="input__wrap" name="phone" placeholder="Телефон" maxlength="18">
-                            </div>
-
-                            {{--указываем тип заявки--}}
-                            <input type="hidden" name="type_order" value="TESTDRIVE">
-                            {{--комментарий к заявке--}}
-                            <input type="hidden" name="comment" value="{{ $page->h1 }}">
-                            {{--указываем с какой страницы была вызвана форма--}}
-                            <input type="hidden" name="url" value="{{$domain->domain}}.ros-telematika.test{{request()->getPathInfo()}}">
-
-                            <div onclick="sendOrder('test_drive')"
-                                 class="form__btn btn btn_bg-red btn_border-red btn_uppercase btn_large btn_animate">Попробовать</div>
-                        </form>
-
-                        <div class="form__foot">
-                            <div class="form__policy policy">
-                                <div id="result_send_order_test_drive" class="result_send_order"></div>
-                                Нажимая кнопку «Попробовать», вы даете согласие на обработку персональных данных в соответствии с
-                                <a class="locality modal-show"
-                                   data-toggle="modal"
-                                   data-target="#modal-policy">Политикой конфиденциальности</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+        @include('pages.inc.sec_main_slide', [ 'img_slide'=>'home-slider-1.jpg',
+            'text_slide'=>["Вы оставляете заявку",
+                "Мы бесплатно устанавливаем систему мониторинга на 1 ТС",
+                "Обучаем и консультируем по всем вопросам",
+                "Вы видите результат экономии, благодаря нашей системе"] ])
 
 
         {{-- Инфо-блок - Спутниковая система Глонасс --}}
@@ -102,20 +53,45 @@
         {{-- Стоимость установки ГЛОНАСС. Готовые решения --}}
         @include('pages.inc.sec_services')
 
-
-
         {{-- Калькулятор -------------------------------------------------------------------}}
-        <div class="block-calculator pb-5">
-            <div class="container bg-success">
-                <!--h2 class="text-center text-center pt-5 pb-3 m-0">Давайте рассчитаем эффективность внедрения наших решений?</h2-->
-                   Здесь будет калькулятор
-
-            </div>
-        </div>
+        @include('pages.inc.sec_calculator')
 
 
         {{-- Сокращение расходов и гибкая логистика --}}
-        @include('pages.inc.sec_raskhodi')
+        <div class="block-3 pb-5">
+            <div class="container">
+                <h2 class="text-center text-center pt-5 pb-3 m-0">Сокращение расходов и гибкая логистика</h2>
+
+                <div class="row w-100">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="b3-head">99,9%</div>
+                            <p>Обнаружение сливов</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="b3-head">до 25%</div>
+                            <p>Снижение расходов на топливо</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="b3-head">до 19%</div>
+                            <p>Снижение расходов на обслуживание</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="b3-head">до 40%</div>
+                            <p>Снижение пробега</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
         {{-- Как работает система -------------------------------------------------------------------}}
@@ -246,7 +222,7 @@
         {{-- Примеры внедрения и отзывы --}}
         @include('pages.inc.sec_portfolio')
 
-        {{-- Примеры внедрения и отзывы --}}
+        {{-- Инфа о кол-ве клиентов --}}
         @include('pages.inc.sec_clients')
 
         {{-- Этапы работ --}}

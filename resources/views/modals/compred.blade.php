@@ -1,9 +1,9 @@
-<div class="modal fade modal-base-form" id="modal_compred" tabindex="-1" role="dialog" aria-labelledby="exampleZakazRing" aria-hidden="true">
+<div class="modal fade modal-base-form" id="modal_compred" tabindex="-1" role="dialog" aria-labelledby="exampleCompred" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h3 class="modal-title text-center w-100" id="exampleZakazRing">
+                <h3 class="modal-title text-center w-100" id="exampleCompred">
                     Получить коммерческое предложение на
                     <span class="modal-title-theme"></span>
                 </h3>

@@ -33,6 +33,7 @@ class SendOrderRequest extends FormRequest
             'timecall' => $this->exists('timecall') ? 'required' : '',
             'type_partner' => $this->exists('type_partner') ? 'required' : '',
             'count' => $this->exists('count') ? 'required' : '',
+            'comment' => $this->exists('comment') ? 'required' : '',
         ];
     }
 
@@ -55,7 +56,8 @@ class SendOrderRequest extends FormRequest
             'timecall.required' => 'Когда Вам можно позвонить?',
             'city.required' => 'Откуда Вы? - Укажите населеный пункт!',
             'type_partner.required' => 'Пожалуйста, выберете вариант сотрудничества',
-            'count.required' => 'Укажите количество подключений',
+            'count.required' => 'Укажите количество',
+            'comment.required' => 'Напишите текст сообщения',
         ];
     }
 }

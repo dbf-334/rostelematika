@@ -24,8 +24,6 @@
             margin-right: 15px;
         }
     </style>
-
-    <link href="{{ mix('/css/sec_calculator.css') }}" rel="stylesheet">
 @endsection
 
 
@@ -70,8 +68,6 @@
 
         </div>
     </div>
-
-    @include('pages.inc.sec_calculator')
 
 @endsection
 

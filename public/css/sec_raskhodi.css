@@ -1,1 +1,56 @@
-#sec_raskhodi{background-color:#f1f7f9;text-align:center}#sec_raskhodi .row{height:auto}#sec_raskhodi .container .row .card{border:none;width:14rem;float:left;background:transparent}#sec_raskhodi .container .row .card .card-body{padding-bottom:0}#sec_raskhodi .b3-head{font-size:42px;color:#f93446;margin-bottom:30px}#sec_raskhodi .container .row .card .card-body p{font-weight:700}@media screen and (max-width:992px){#sec_raskhodi .container .row .card{width:16rem}}@media screen and (max-width:768px){#sec_raskhodi .container .row .card{width:100%}}
+@charset "UTF-8";
+
+/*************************************************************************/
+
+/*  Сокращение расходов и гибкая логистика  */
+
+/*************************************************************************/
+
+/***********************************************************/
+
+/*** БЛОК-3 ************************************************/
+
+/***********************************************************/
+
+#sec_raskhodi {
+  background-color: #f1f7f9;
+  text-align: center;
+}
+
+#sec_raskhodi .row {
+  height: auto;
+}
+
+#sec_raskhodi .container .row .card {
+  border: none;
+  width: 14rem;
+  float: left;
+  background: transparent;
+}
+
+#sec_raskhodi .container .row .card .card-body {
+  padding-bottom: 0;
+}
+
+#sec_raskhodi .b3-head {
+  font-size: 42px;
+  color: #f93446;
+  margin-bottom: 30px;
+}
+
+#sec_raskhodi .container .row .card .card-body p {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  #sec_raskhodi .container .row .card {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sec_raskhodi .container .row .card {
+    width: 100%;
+  }
+}
+

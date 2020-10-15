@@ -9,7 +9,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-1">
-                    <div class="card-img" style="background-image: url('/img/main/1.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/1.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/gruzoviki.html" title="Грузовики">Грузовой транспорт</a>
@@ -31,7 +31,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-2">
-                    <div class="card-img" style="background-image: url('/img/main/2.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/2.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/specz-texnika.html" title="Спец. техника">Спец. техника</a>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="card b2-box-2">
-                    <div class="card-img" style="background-image: url('/img/main/3.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/3.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/toplivozapravshhiki.html" title="Топливозаправщики">Топливозаправщики</a>
@@ -73,7 +73,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-1">
-                    <div class="card-img" style="background-image: url('/img/main/4.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/4.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/traktoryi-i-sx-texnika.html" title="Сельхоз техника">Сельхоз техника</a>
@@ -95,7 +95,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-1">
-                    <div class="card-img" style="background-image: url('/img/main/5.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/5.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/vozdushnyij-transport.html" title="Воздушный транспорт">Воздушный транспорт</a>
@@ -117,7 +117,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-2">
-                    <div class="card-img" style="background-image: url('/img/main/6.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/6.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/taksi.html" title="Такси">Такси</a>
@@ -137,7 +137,7 @@
                 </div>
 
                 <div class="card b2-box-2">
-                    <div class="card-img" style="background-image: url('/img/main/7.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/7.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/poezda.html" title="Поезда">Поезда</a>
@@ -159,7 +159,7 @@
 
             <div class="b2-group-box">
                 <div class="card b2-box-1">
-                    <div class="card-img" style="background-image: url('/img/main/8.jpg');"></div>
+                    <div class="card-img" style="background-image: url('/img/section/services/8.jpg');"></div>
                     <div class="card-body">
                         <div class="b2-head">
                             <a href="/catalog/legkovoj-transport.html" title="Легковой транспорт">Легковой транспорт</a>

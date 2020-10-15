@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use App\Models\Domain;
+use App\Models\Reviews;
+use App\Models\Variables;
+use App\Models\Equipment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Domain;
-use App\Models\Variables;
 
 
 class PagesController extends Controller
@@ -23,10 +25,10 @@ class PagesController extends Controller
 
         //помещаем эти значения в глобальный массив
         app()->instance('global',
-            ['main_phone' => $variables->main_phone,                    //Основной телефон (8-800-)
+            ['main_phone' => $variables->main_phone,                    //Основной телефон (8-800-xxxxxxxx)
                 'client_count' => $variables->client_count,             //Общее число клиентов
-                'whatsapp_phone' => $variables->whatsapp_phone,         //Номер телефона WHATSAPP для header/footer
-                'skype_id' => $variables->skype_id,                     //Учетка SKYPE для header/footer
+                'whatsapp_phone' => $variables->whatsapp_phone,         //Номер телефона WHATSAPP
+                'skype_id' => $variables->skype_id,                     //Учетка SKYPE
                 'vk_url' => $variables->vk_url,                         //Ссылка компании на страницу в Контакте
                 'instagram_url' => $variables->instagram_url,           //Ссылка компании на страницу в Инстаграмм
                 'connected_wialon' => $variables->connected_wialon      //Подключено объектов Виалон
@@ -82,15 +84,6 @@ class PagesController extends Controller
     }*/
 
 
-    /*public function category_units($id)
-    {
-        $units=Units::where('id','=',$id)->first();
-
-        $page->title='ok';
-
-        //выводим простую страницу из БД
-        return view('pages.category-link-page.base-units-page', ['units'=>$units]);
-    }*/
 
 
     public function first_pages($d, $url, Request $request){
@@ -128,4 +121,74 @@ class PagesController extends Controller
 
         return view('pages.services.' . $url, ['page' => $page]);
     }
+
+
+    // Раздел - Готовые решения /////////////////////////////////////////////////////////////////////////////////////
+    public function catalog($d, $url, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.catalog.' . $url, ['page' => $page]);
+    }
+
+    // Раздел - Отзывы /////////////////////////////////////////////////////////////////////////////////////
+    public function reviews($d, $url, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы отзыва
+        $reviews = Reviews::where('id', '=', $url)->firstOrFail();
+
+        //Пересобираем структуру с недостающими данными PAGE
+        $page= new \stdClass();
+        $page->title = 'Отзыв от '.$reviews->title.' | Ростелематика';
+        $page->description = 'Отзыв от '.$reviews->title.' | Ростелематика во всех городах';
+
+        return view('pages.reviews.base', ['page' => $page, 'reviews' => $reviews]);
+    }
+
+
+    // Раздел - Оборудование /////////////////////////////////////////////////////////////////////////////////////
+    public function oborudovanie($d, $url, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы отзыва
+        $equipments = Equipment::where('url', '=', $url)->firstOrFail();
+
+        //Пересобираем структуру с недостающими данными PAGE
+        $page= new \stdClass();
+        $page->title = $equipments->type.' '.$equipments->model.'. Купить оборудование в компании Ростелематика';
+        $page->description = 'Отзыв от '.$equipments->title.' | Ростелематика во всех городах';
+
+        //формируем описание для выбранной категории товара
+        switch ($equipments->type) {
+            case 'Курсоуказатель':
+                $opis='агронавигатор для систем параллельного вождения. Описание, характеристики, инструкция. Продажа, установка и обслуживание навигаторов для трактора во всех городах';
+                break;
+            case 'Датчик уровня топлива':
+                $opis='GPS/ГЛОНАСС оборудование для спутникового слежения и контроля Вашего автопарка. Описание, характеристики, инструкция. Продажа, установка и обслуживание датчика во всех городах';
+                break;
+            default:
+                $opis='';
+        }
+
+        $page->description = $equipments->type.' '.$equipments->model.' - '.$opis;
+
+        return view('pages.oborudovanie.base', ['page' => $page, 'equipments' => $equipments]);
+    }
+
+
 }

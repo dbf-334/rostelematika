@@ -1,0 +1,88 @@
+
+.page-oborudovanie .box-menu,
+.page-oborudovanie .box-info,
+.page-oborudovanie .box-image,
+.page-oborudovanie .box-link,
+.page-oborudovanie .box-opis
+{
+  border: none;
+}
+
+.page-oborudovanie .box-info {
+  width: 75%;
+}
+.page-oborudovanie .box-menu {
+  width: 260px;
+}
+.page-oborudovanie .box-image {
+  width: 300px;
+}
+.page-oborudovanie .box-opis {
+  width: 90%;
+}
+.page-oborudovanie .box-opis p {
+  text-indent: 20px;
+}
+
+.page-oborudovanie .box-link {
+  padding-top: 4rem;
+}
+
+.page-oborudovanie .box-link .btn {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 80px;
+}
+.page-oborudovanie .box-link .btn_bg-red {
+  border: 2px solid #f93446;
+  color:#fff;
+  background-color:#f93446;
+  font-size: 15px;
+  height: 38px;
+}
+.page-oborudovanie .box-link .btn_bg-red:hover {
+  border-color:#da061a;
+  background-color:#da061a
+}
+.page-oborudovanie .box-link .catalog__btn {
+  color: #fff;
+  width: max-content;
+  margin-right: 10px;
+  outline: none !important;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .page-oborudovanie .box-info {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .page-oborudovanie .box-menu {
+    display: none;
+  }
+  .page-oborudovanie .box-info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-oborudovanie .box-link {
+    padding-top: 0;
+  }
+}
+
+
+
+
+
+
+
+

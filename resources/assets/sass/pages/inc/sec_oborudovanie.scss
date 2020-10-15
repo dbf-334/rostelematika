@@ -1,0 +1,151 @@
+
+/*** Общие стили для вставляемых блоков на страницу - Оборудование ***/
+
+.oborudovanie .card {
+  width: 23%;
+  text-align: center;
+}
+.oborudovanie .card a {
+  text-decoration: none;
+}
+.oborudovanie .card:hover {
+  -webkit-box-shadow:0 0 5px rgba(0,0,0,.2);
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+}
+.oborudovanie .card .lider {
+  background-image: url('/img/main/lider.png');
+  width: 131px;
+  height: 131px;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}
+.oborudovanie .card .card-img {
+  margin-top: 2rem;
+}
+.oborudovanie .card .card-img img {
+  max-height: 150px;
+}
+
+.oborudovanie .card .card-footer {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+.oborudovanie .card .card-footer .catalog__btn {
+  color: #fff;
+  //width: 100px;
+  margin-right: 10px;
+  border-color: rgba(255,255,255,0.3);
+  outline: none !important;
+}
+.oborudovanie .card .card-footer .btn_small {
+  font-size: 15px;
+  height: 38px;
+}
+.oborudovanie .card .card-footer .btn_italic {
+  font-style: italic;
+  font-weight: 500;
+}
+.oborudovanie .card .card-footer .btn_border-gray {
+  border: 1px solid #d7dfe2;
+  color: #212121;
+}
+.oborudovanie .card .card-footer .btn_border-red {
+  border: 2px solid #f93446;
+}
+.oborudovanie .card .card-footer .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 80px;
+}
+.oborudovanie .card .card-footer a {
+  text-decoration: none;
+}
+
+.oborudovanie .card .card-footer .btn_hover-bg-blue:hover {
+  color:#fff;
+  border-color:#01aef2;
+  background-color:#01aef2
+}
+.oborudovanie .card .card-footer .btn_bg-red {
+  color:#fff;
+  background-color:#f93446
+}
+.oborudovanie .card .card-footer .btn_bg-red:hover {
+  border-color:#da061a;
+  background-color:#da061a
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .oborudovanie .card .card-img {
+    height: 120px;
+  }
+  .oborudovanie .card .card-img img {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .oborudovanie .card .card-body {
+    height: 115px;
+  }
+  .oborudovanie .card .card-footer a {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .oborudovanie .card {
+    width: 45%;
+  }
+  .oborudovanie .card .card-img {
+    height: 170px;
+  }
+  .oborudovanie .card .card-img img {
+    max-height: 200px;
+  }
+  .oborudovanie .card .card-body {
+    height: 90px;
+  }
+  .oborudovanie .card .card-footer a {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .oborudovanie .card .card-img {
+    height: 100px;
+  }
+  .oborudovanie .card .card-img img {
+    height: 120px;
+    width: auto;
+  }
+  .oborudovanie .card .card-body {
+    padding-top: 30px;
+    height: 120px;
+  }
+  .oborudovanie .card .card-footer a {
+    //margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+

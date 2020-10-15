@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------------
+.block-3 {
+  background-color: #f1f7f9;
+  text-align: center;
+}
+.block-3 .row {
+  height: auto;
+}
+
+.block-3 .container .row .card {
+  border: none;
+  width: 14rem;
+  float: left;
+  background: transparent;
+}
+.block-3 .container .row .card .card-body {
+  padding-bottom: 0;
+}
+
+.block-3 .container .row .card .card-body div i {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width: 992px) {
+  .block-3 .container .row .card {
+    width: 16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block-3 .container .row .card {
+    width: 100%;
+  }
+}

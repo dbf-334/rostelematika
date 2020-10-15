@@ -1,0 +1,212 @@
+
+//--------------------------------------------------------------------------
+.block-1 .card {
+  border: none;
+}
+
+.block-1 .laptop {
+  background-image: url('/img/pages/gruzoviki/s1200.jpg');
+  background-size: contain;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.block-1 .bodytext {
+  padding-right: 8%;
+  width: 50%;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  .block-1 .laptop {
+    width: 30%;
+  }
+  .block-1 .bodytext {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-1 .bodytext {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .block-1 .laptop {
+    width: 50%;
+    height: 200px;
+  }
+  .block-1 .bodytext {
+    width: 90%;
+  }
+}
+
+
+//--------------------------------------------------------------------------
+.block-2 {
+  background-color: #f1f7f9;
+
+}
+.block-2 .card {
+  border: none;
+  background-color: transparent;
+}
+
+.block-2 .equipment {
+  background-image: url('/img/pages/kontrol-temperatury-v-refrizheratore/515276246.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.block-2 .bodytext {
+  width: 50%;
+  padding: 3% 3%;
+}
+
+.block-2 .bodytext .card-body h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .block-2 .equipment {
+    width: 35%;
+  }
+  .block-2 .bodytext {
+    width: 60%;
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-2 .equipment {
+    width: 100%;
+    height: 270px;
+  }
+  .block-2 .bodytext {
+    padding: 0;
+    width: 90%;
+  }
+}
+
+
+
+//---------------------------------------------------------------------------------
+.block-3 {
+  background-color: #f1f7f9;
+  text-align: center;
+}
+.block-3 .row {
+  height: auto;
+}
+
+.block-3 .container .row .card {
+  border: none;
+  width: 14rem;
+  float: left;
+  background: transparent;
+}
+.block-3 .container .row .card .card-body {
+  padding-bottom: 0;
+}
+
+.block-3 .b3-head {
+  font-size: 42px;
+  color: #f93446;
+  margin-bottom: 30px;
+}
+.block-3 .container .row .card .card-body p {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .block-3 .container .row .card {
+    width: 16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block-3 .container .row .card {
+    width: 100%;
+  }
+}
+
+
+//--------------------------------------------------------------------------------------
+.block-4 .bodytext {
+  width: 330px;
+  padding-top: 15%;
+}
+.block-4 .block-box {
+  width: 730px;
+}
+.block-4 .bodytext h3 {
+  margin-bottom: 40px;
+}
+.block-4 .element {
+  width: 220px;
+  height: auto;
+  text-align: center;
+}
+.block-4 .card {
+  margin-left: 20px;
+  margin-right: 0;
+  border: none;
+}
+
+.block-4 .card .card-img img {
+  width: 160px;
+}
+.block-4 .card .card-body {
+  font-size: 18px;
+  font-weight: 600;
+}
+.block-4 .card .card-body p {
+  font-size: 17px;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .block-4 .block-box {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .block-4 .bodytext {
+    width: 100%;
+    padding-top: 0;
+  }
+  .block-4 .block-box {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+
+//----------------------------------------------------------------------------
+.block-5 {
+  //background-color: #f1f7f9;
+}
+
+.block-5 h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+
+

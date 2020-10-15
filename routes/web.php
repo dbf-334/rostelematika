@@ -31,14 +31,19 @@ Route::domain('{domain}.ros-telematika.test') ->group( function($domain) {
     Route::get('/{url}.html', 'PagesController@first_pages');
     Route::get('/{url}', 'PagesController@first_pages');    //главные страницы разделов (услуги, решения и т.д.)
 
-    Route::get('services/{url}.html', 'PagesController@services');
+    Route::get('/services/{url}.html', 'PagesController@services'); //все страницы раздела - Услуги
+        Route::get('/services/{url}', 'PagesController@services'); //страницы исключения раздела - Услуги (например: Курсоуказатели и т.д.)
+
+    Route::get('/catalog/{url}.html', 'PagesController@catalog'); //все страницы раздела - Готовые решения
+
+    Route::get('/oborudovanie/{url}', 'PagesController@oborudovanie'); //все страницы раздела - Оборудование
+
+    Route::get('/reviews/{url}.html', 'PagesController@reviews'); //все страницы раздела - Отзывы
 
 });
 
-    //Route::get('/', 'PagesController@index');
-    //Route::get('/{url}', 'PagesController@first_pages');
-    //Route::get('/units/{id}', 'PagesController@category_units');
-    //Route::get('/{category}/{url}', 'PagesController@category_pages');
+
+
 
 
 

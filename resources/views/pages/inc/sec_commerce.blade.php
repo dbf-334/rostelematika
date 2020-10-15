@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="mt-3 row i-mid">
+            <div class="mt-3 row h-auto i-mid">
                 <div id="result_send_order_sec_compred" class="w-100 text-left">* все поля обязательны для заполнения</div>
                 <div class="form__policy policy">
                     Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных в соответствии с

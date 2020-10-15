@@ -4,6 +4,7 @@
   margin-bottom: 0;
   margin-left: 0;
   list-style-image: none;
+  display: block;
 }
 
 /*******************************************************************/
@@ -34,7 +35,30 @@
 }
 
 
-
+@media screen and (max-width: 992px) {
+  .main-menu {
+    z-index: 1020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  }
+  /* Увеличиваем отступ у Хэдера из-за фиксации меню */
+  .header {
+    margin-top: 56px;
+  }
+  .main-menu .container .navbar .navbar-collapse {
+    overflow-y: auto; //добавляем прокрутку меню
+    bottom: 0;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 0;
+    padding: 1rem 3rem;
+    background-color: #f1f7f9;
+  }
+}
 
 
 
