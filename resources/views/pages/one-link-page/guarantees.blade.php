@@ -9,8 +9,8 @@
 @section('to_header')
     <link href="{{ asset('/css/guarantees.css') }}" rel="stylesheet">
 
-    <link href="{{ mix('/css/sec_yandex_map.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_smi_news.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_yandex_map.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_smi_news.css') }}" rel="stylesheet">
 @endsection
 
 

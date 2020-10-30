@@ -8,7 +8,7 @@
 
 @section('to_header')
     {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
-    <link href="{{ mix('/css/sec_services.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_services.css') }}" rel="stylesheet">
 
     <style>
         /*** корректировка стилей блока ***/

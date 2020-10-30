@@ -10,7 +10,8 @@ class Reviews extends Model
      * не используем даты в этой модели
      * @var bool
      */
-    public $timestamps = false;
+
+    /*public $timestamps = false;*/
 
     protected $table ='reviews';
 }

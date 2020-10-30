@@ -7,9 +7,9 @@
 
 
 @section('to_header')
-    <link href="{{ mix('/css/sec_oborudovanie.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_oborudovanie.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
 
     <style>
         .page-oborudovanie .link {
@@ -56,6 +56,22 @@
         <div class="w-100 text-center pt-5 pb-2">
             <h1 class="text-dark">{{ $page->h1 }}</h1>
         </div>
+
+        <div class="container">
+            <div class="row h-auto pb-3 pt-5">
+                <h2 class="float-left m-0 mr-4">GPS/ГЛОНАСС Трекеры</h2>
+                <a href="/services/monitoring-transporta.html#oborudovanie" class="btn link">Подробнее</a>
+            </div>
+        </div>
+        @include('pages.inc.oborud_count',[ 'type'=>'GPS/ГЛОНАСС Трекер', 'count'=>4 ])
+
+        <div class="container">
+            <div class="row h-auto pb-3 pt-5">
+                <h2 class="float-left m-0 mr-4">GPS Маяки</h2>
+                <a href="/oborudovanie/all-gps-mayaki.html#oborudovanie" class="btn link">Подробнее</a>
+            </div>
+        </div>
+        @include('pages.inc.oborud_count',[ 'type'=>'GPS Маяк', 'count'=>4 ])
 
         <div class="container">
             <div class="row h-auto pb-3 pt-5">

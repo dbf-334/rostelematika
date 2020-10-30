@@ -8,8 +8,8 @@
 
 @section('to_header')
     {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
 
     <style>
         p {text-indent: 20px;}

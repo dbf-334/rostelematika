@@ -7,22 +7,23 @@
 
 
 @section('to_header')
-    <link href="{{ asset('css/monitoring-transporta.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/monitoring-transporta.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/sec_main_slide.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/sec_advantages.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_calculator.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_portfolio.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_main_slide.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_advantages.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_calculator.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_portfolio.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_steps.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_oborudovanie.css') }}" rel="stylesheet">
 
 @endsection
 
 
 @section('to_footer')
-    <script src="{{ asset('js/sec_calculator.js') }}"></script>
+    <script src="{{ asset('/js/sec_calculator.js') }}"></script>
 
     <script>
         {{-- Меняем картинки в блоке / Инфа о кол-ве клиентов --}}
@@ -224,6 +225,20 @@
                     полную техническую поддержку устройств.</p>
             </div>
         </div>
+
+
+        {{-- Оборудование для навигации --}}
+        <div class="container" id="oborudovanie">
+            <h2>GPS/ГЛОНАСС Трекеры (Терминалы)</h2>
+        </div>
+        @include('pages.inc.oborud_all',['type'=>'GPS/ГЛОНАСС Трекер'])
+
+        <div class="container" id="oborudovanie">
+            <h2 class="float-left m-0 mr-4">Также у нас есть GPS Маяки</h2>
+            <a href="/oborudovanie/all-gps-mayaki.html" class="btn link">Подробнее</a>
+        </div>
+        @include('pages.inc.oborud_count',[ 'type'=>'GPS Маяк', 'count'=>4 ])
+
 
         {{-- Цены на покупку оборудования --}}
         <div class="block-6 pt-3 pb-5">

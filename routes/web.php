@@ -36,7 +36,11 @@ Route::domain('{domain}.ros-telematika.test') ->group( function($domain) {
 
     Route::get('/catalog/{url}.html', 'PagesController@catalog'); //все страницы раздела - Готовые решения
 
-    Route::get('/oborudovanie/{url}', 'PagesController@oborudovanie'); //все страницы раздела - Оборудование
+    Route::get('/oborudovanie/all-gpsglonass-treker.html', 'PagesController@oborud_gpsglonass_treker'); //весь список оборудования - GPS/ГЛОНАСС Трекеры
+    Route::get('/oborudovanie/all-gps-mayaki.html', 'PagesController@oborud_gps_mayak'); //весь список оборудования - GPS Маяки
+    Route::get('/oborudovanie/all-datchiki-urovnya-topliva.html', 'PagesController@oborud_dut'); //весь список оборудования - Датчики уровня топлива
+    Route::get('/oborudovanie/all-kursoukazateli.html', 'PagesController@oborud_kursoukazatel'); //весь список оборудования - Курсоуказатели
+        Route::get('/oborudovanie/{url}', 'PagesController@oborudovanie'); //все страницы раздела - Оборудование
 
     Route::get('/reviews/{url}.html', 'PagesController@reviews'); //все страницы раздела - Отзывы
 

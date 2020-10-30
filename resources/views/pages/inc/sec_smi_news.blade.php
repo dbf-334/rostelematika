@@ -23,26 +23,13 @@
                             <div class="card portfolio__data">
                                 <div class="card-body">
                                     <img src="/img/section/smi_o_nas/{{$item->img}}">
-                                    {{--<div class="portfolio__logo"></div>
-                                    <div class="portfolio__company">{{$item->title}}</div>
-                                    <div class="portfolio__text">
-                                        {!! $item->portfolio !!}
-                                    </div>--}}
                                 </div>
                             </div>
                             <div class="card portfolio__review">
                                 <div class="card-body">
                                     <div class="review__text">
                                         <p>{!! $item->body !!}</p>
-                                        <!--p><a href="/files/reviews/gaz-010817.pdf" target="_blank">Полная статья</a></p-->
                                     </div>
-                                    {{--<div class="review__data i-mid">
-                                        <div class="review__img"><img src="/img/section/portfolio/{{$item->avatar}}"></div>
-                                        <div class="row review__persona">
-                                            <div class="review__name">{{$item->fio}}</div>
-                                            <div class="review__position">{{$item->position}}</div>
-                                        </div>
-                                    </div>--}}
                                 </div>
                             </div>
                         </div>

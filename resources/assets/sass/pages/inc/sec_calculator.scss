@@ -140,7 +140,8 @@
 //изменяем внешний вид кнопок - radio (шаг-1)
 input[type=radio] {
   padding: 0.5em;
-  -webkit-appearance: none;
+  //-webkit-appearance: none;
+  appearance: none;
   background-image: url(/img/svg/notick.svg);
   min-width: 26px;
   min-height: 26px;
@@ -163,7 +164,12 @@ input[type=radio]:checked {
 
 
 
-
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  //height: 7px;
+  //border: 1px solid cyan;
+  background-color: #f93446;
+}
 
 #calculator .container .calc__wrap .slider {
   position: relative;
@@ -173,6 +179,7 @@ input[type=radio]:checked {
   transition-property: width,height,left,right,top,bottom;
   background-color: #ccc;
   border-radius: 15px;
+  appearance: none;
 }
 
 #calculator .container .calc__wrap .slider::-webkit-slider-thumb {

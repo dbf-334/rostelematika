@@ -13,6 +13,8 @@ class Domain extends Model
      */
     public $timestamps = false;
 
+    protected $table ='domains';
+
 
     /**
      * Формируем объект с данными поддомена и передаем его сразу во все шаблоны

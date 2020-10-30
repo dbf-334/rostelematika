@@ -5,12 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 use App\Models\Domain;
-//use App\Models\Equipment;
-//use App\Models\Kit;
-//use App\Models\News;
 use App\Models\Page;
-//use App\Models\Review;
-//use App\Models\TahoWork;
+use App\Models\Equipment;
+use App\Models\Reviews;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
@@ -97,7 +94,9 @@ class RobotController extends Controller
     // Генерация HTTPS карты сайта для всех поддоменов
     public function sitemap() {
         $pages = Page::get();
-        return view('sitemap')->with(compact('pages') );
+        $equipment = Equipment::get();
+        $reviews = Reviews::get();
+        return view('sitemap')->with(compact(['pages', 'equipment', 'reviews']) );
     }
 
 }

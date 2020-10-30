@@ -9,11 +9,11 @@
 @section('to_header')
     <link href="{{ asset('/css/about.css') }}" rel="stylesheet">
 
-    <link href="{{ mix('/css/sec_yandex_map.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_smi_news.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_yandex_map.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_smi_news.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_commerce.css') }}" rel="stylesheet">
 
 @endsection
 

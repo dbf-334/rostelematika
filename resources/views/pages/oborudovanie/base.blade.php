@@ -10,12 +10,12 @@
     {{-- Загружаем стили - Галерея изображений --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
 
-    <link href="{{ asset('css/oborudovanie.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/oborudovanie.css') }}" rel="stylesheet">
 
     {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_oborudovanie.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_oborudovanie.css') }}" rel="stylesheet">
 
     <style>
         .box-opis ul li::before {
@@ -55,9 +55,9 @@
                         Другое наше оборудование
                     </div>
                     <div class="card-body p-3">
-                        <div class="pb-2"><a href="/services/monitoring-transporta.html#oborudovanie">GPS/ГЛОНАСС Трекеры (Терминалы)</a></div>
-                        <div class="pb-2"><a href="/services/kontrol-rasxoda-topliva.html#oborudovanie">Датчики уровня топлива</a></div>
-                        <div><a href="/services/kursoukazateli#oborudovanie">Курсоуказатели</a></div>
+                        @foreach(DB::table('pages')->where('id_category','=',4)->where('url','<>','oborudovanie')->get() as $item)
+                            <div class="pb-2"><a href="/{{$item->url}}">{{$item->h1}}</a></div>
+                        @endforeach
                     </div>
                 </div>
 

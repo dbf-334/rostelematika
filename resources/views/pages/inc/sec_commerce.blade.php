@@ -41,9 +41,6 @@
                              class="kp__btn kp__input btn btn_bg-red btn_border-red btn_italic btn_large">Отправить</div>
                         </div>
 
-                        <!--div class="col-lg-3 col-md-6">
-                            <button class="kp__btn kp__input btn btn_bg-red btn_border-red btn_italic btn_large">Отправить</button>
-                        </div-->
                     </div>
                 </div>
             </div>

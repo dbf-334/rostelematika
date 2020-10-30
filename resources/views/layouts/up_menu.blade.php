@@ -26,7 +26,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link up-menu-secondary" href="http://gps.nav-system.ru/" target="_blank">Вход для клиентов</a>
+                        <a class="nav-link up-menu-secondary" href="https://hosting.wialon.com/" target="_blank">Вход для клиентов</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link up-menu-secondary" href="/mobilnyie-prilozheniya.html">Мобильное приложение</a>

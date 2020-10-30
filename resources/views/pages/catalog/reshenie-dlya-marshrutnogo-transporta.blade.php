@@ -7,19 +7,19 @@
 
 
 @section('to_header')
-    <link href="{{ asset('css/reshenie-dlya-marshrutnogo-transporta.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/reshenie-dlya-marshrutnogo-transporta.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/sec_main_slide.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_reviews.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_main_slide.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_reviews.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_steps.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_commerce.css') }}" rel="stylesheet">
 
 @endsection
 
 
 @section('to_footer')
-    <script src="{{ asset('js/circle_anim.js') }}"></script>
+    <script src="{{ asset('/js/circle_anim.js') }}"></script>
 
     <script>
         {{-- Меняем картинки в блоке / Инфа о кол-ве клиентов --}}

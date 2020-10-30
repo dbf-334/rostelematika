@@ -7,14 +7,14 @@
 
 
 @section('to_header')
-    <link href="{{ asset('css/sistemyi-videonablyudeniya-dlya-transporta.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sistemyi-videonablyudeniya-dlya-transporta.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/sec_main_slide.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/sec_advantages.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_calculator.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_services.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_main_slide.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_advantages.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_calculator.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_services.css') }}" rel="stylesheet">
 
     <style>
         #sec_services { background-color: transparent; }
@@ -25,7 +25,7 @@
 
 
 @section('to_footer')
-    <script src="{{ asset('js/sec_calculator.js') }}"></script>
+    <script src="{{ asset('/js/sec_calculator.js') }}"></script>
 
     <script>
         {{-- Меняем картинки в блоке / Инфа о кол-ве клиентов --}}

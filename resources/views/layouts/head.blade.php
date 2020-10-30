@@ -14,7 +14,7 @@
 
             <div class="card header-links "> <!-- d-none d-lg-block -->
                 <div class="card-body">
-                    <a class="header_link" href="http://gps.nav-system.ru/" target="_blank">
+                    <a class="header_link" href="https://hosting.wialon.com/" target="_blank">
                         <i class="svg-icon icon-cloud-blue"></i>
                         <span>Демо доступ</span>
                     </a>

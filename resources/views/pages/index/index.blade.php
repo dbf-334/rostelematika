@@ -10,24 +10,24 @@
 
 @section('to_header')
     {{-- Базовые стили текущей страницы --}}
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/index.css') }}" rel="stylesheet">
 
     {{-- Подключаем стили секций/блоков, которые используются на данной странице --}}
-    <link href="{{ mix('css/sec_main_slide.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_portfolio.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_clients.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_steps.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_commerce.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_services.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_advantages.css') }}" rel="stylesheet">
-    <link href="{{ mix('/css/sec_calculator.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_main_slide.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_portfolio.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_clients.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_steps.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_commerce.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_services.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_advantages.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/sec_calculator.css') }}" rel="stylesheet">
 
 @endsection
 
 
 
 @section('to_footer')
-    <script src="{{ asset('js/sec_calculator.js') }}"></script>
+    <script src="{{ asset('/js/sec_calculator.js') }}"></script>
 @endsection
 
 

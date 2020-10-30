@@ -15,7 +15,7 @@
             <div class="modal-body">
                 @foreach(\App\Models\Domain::orderBy('name', 'asc')->get() as $domain_item)
                     <a class="btn btn-outline-primary mt-3"
-                       href="//{{$domain_item->domain}}.ros-telematika.test{{request()->getPathInfo()}}">
+                       href="//{{$domain_item->domain}}.ros-telematika.ru{{request()->getPathInfo()}}">
                         {{$domain_item->name}}
                     </a>
                 @endforeach

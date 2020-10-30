@@ -7,7 +7,7 @@
 
 
 @section('to_header')
-    <link href="{{ asset('css/services.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/services.css') }}" rel="stylesheet">
 @endsection
 
 

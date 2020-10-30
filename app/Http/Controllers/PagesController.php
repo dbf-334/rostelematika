@@ -7,6 +7,8 @@ use App\Models\Domain;
 use App\Models\Reviews;
 use App\Models\Variables;
 use App\Models\Equipment;
+use App\Models\Equipment_desc;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -165,8 +167,10 @@ class PagesController extends Controller
         //помещаем $domain в шаблон
         Domain::init($d);
 
-        //загружаем данные страницы отзыва
+        //загружаем данные страницы оборудования
         $equipments = Equipment::where('url', '=', $url)->firstOrFail();
+        //загружаем описание DESCRIPTION для типа выбранного оборудования
+        $equipment_descs = Equipment_desc::where('type', '=', $equipments->type)->firstOrFail();
 
         //Пересобираем структуру с недостающими данными PAGE
         $page= new \stdClass();
@@ -174,21 +178,65 @@ class PagesController extends Controller
         $page->description = 'Отзыв от '.$equipments->title.' | Ростелематика во всех городах';
 
         //формируем описание для выбранной категории товара
-        switch ($equipments->type) {
-            case 'Курсоуказатель':
-                $opis='агронавигатор для систем параллельного вождения. Описание, характеристики, инструкция. Продажа, установка и обслуживание навигаторов для трактора во всех городах';
-                break;
-            case 'Датчик уровня топлива':
-                $opis='GPS/ГЛОНАСС оборудование для спутникового слежения и контроля Вашего автопарка. Описание, характеристики, инструкция. Продажа, установка и обслуживание датчика во всех городах';
-                break;
-            default:
-                $opis='';
-        }
-
-        $page->description = $equipments->type.' '.$equipments->model.' - '.$opis;
+        $page->description = $equipments->type.' '.$equipments->model.' - '.$equipment_descs->opis;
 
         return view('pages.oborudovanie.base', ['page' => $page, 'equipments' => $equipments]);
     }
 
+    // Всё оборудование - Курсоуказатели ///////////////////////////////////////////////////////////////////////////////
+    public function oborud_kursoukazatel($d, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.oborudovanie.all-kursoukazateli', ['page' => $page]);
+    }
+
+    // Всё оборудование - Датчики уровня топлива ///////////////////////////////////////////////////////////////////////
+    public function oborud_dut($d, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.oborudovanie.all-datchiki-urovnya-topliva', ['page' => $page]);
+    }
+
+    // Всё оборудование - GPS Маяки ///////////////////////////////////////////////////////////////////////
+    public function oborud_gps_mayak($d, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.oborudovanie.all-gps-mayaki', ['page' => $page]);
+    }
+
+    // Всё оборудование - GPS/ГЛОНАСС Трекеры ///////////////////////////////////////////////////////////////////////
+    public function oborud_gpsglonass_treker($d, Request $request){
+        //передаём глобальные переменные (счетчики клиентов, установок и т.д.)
+        $this->setGlobal();
+
+        //помещаем $domain в шаблон
+        Domain::init($d);
+
+        //загружаем данные страницы
+        $page = Page::where('url', '=', $request->path())->firstOrFail();
+
+        return view('pages.oborudovanie.all-gpsglonass-treker', ['page' => $page]);
+    }
 
 }

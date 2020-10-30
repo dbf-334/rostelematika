@@ -358,7 +358,36 @@
 }
 
 
+//-------------------------------------------------------------------------
+.page-monitoring-transporta .link {
+  margin-right: 10px;
+  border-color: rgba(255,255,255,0.3);
+  outline: none !important;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  height: 38px;
+  text-decoration: none;
+  width: 150px;
 
+  border: 1px solid #d7dfe2;
+  color: #212121;
+}
+.page-monitoring-transporta .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 80px;
+}
+.page-monitoring-transporta .link:hover {
+  color: #fff;
+  border-color: #01aef2;
+  background-color: #01aef2;
+}
 
 
 

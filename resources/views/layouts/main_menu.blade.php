@@ -88,9 +88,18 @@
                 </li>
 
                 {{-- Оборудование ---------------------------------------------------------------------------------}}
-                <li class="nav-item">
-                    <a class="nav-link" href="/oborudovanie">Оборудование</a>
+                <li class="nav-item bord dropdown">
+                    <a class="nav-link dropdown-toggle" href="/oborudovanie" id="menu_oborudovanie" role="button" data-toggle="dropdown">
+                        Оборудование</a>
+                    <div class="dropdown-menu bg-white" aria-labelledby="menu_oborudovanie">
+                        <a class="dropdown-item"  href="/oborudovanie">Всё оборудование</a>
+                        <div class="dropdown-divider"></div>
+                        @foreach(DB::table('pages')->where('id_category','=',4)->where('url','<>','oborudovanie')->get() as $item)
+                            <a class="dropdown-item" href="/{{$item->url}}">{{$item->h1}}</a>
+                        @endforeach
+                    </div>
                 </li>
+
                 {{-- О компании ---------------------------------------------------------------------------------}}
                 <li class="nav-item">
                     <a class="nav-link" href="/about.html">О компании</a>
@@ -119,7 +128,7 @@
                         <a class="nav-link" href="/guarantees.html">Гарантии</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://gps.nav-system.ru/" target="_blank">Вход для клиентов</a>
+                        <a class="nav-link" href="https://hosting.wialon.com/" target="_blank">Вход для клиентов</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/mobilnyie-prilozheniya.html">Мобильное приложение</a>
@@ -133,5 +142,8 @@
     </nav>
 </div>
 </div>
+
+
+
 
 

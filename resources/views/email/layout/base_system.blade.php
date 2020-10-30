@@ -12,7 +12,7 @@
     </head>
 
 
-    <body style="font-size: 0; line-height: 0; padding: 0; color: #DFDFDF;" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" bgcolor="#DFDFDF">
+    <body>
 
         <table style="width: 100%;">
             <tr>
@@ -21,7 +21,7 @@
                     <table style="width: 100%;">
                         <tr>
                             <td>
-                                <img src="https://ros-telematika.ru/upload/logo.png" style="" alt="">
+                                <img src="https://ros-telematika.ru/img/main/logo.png" style="" alt="">
                             </td>
                             <td style="width: 100%; text-align: center;">
                                 {{--вставляем заголовок письма--}}

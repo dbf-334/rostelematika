@@ -18,8 +18,8 @@ class SupportOrders extends Mailable
     public function build()
     {
         return $this
-            ->from( env('MAIL_SUPPORT') )   //отправляем заявку в техподдержку
-            ->to( env('MAIL_SUPPORT') )
+            ->from( env('MAIL_USERNAME') )   //отправляем заявку в техподдержку
+            ->to( env('MAIL_USERNAME') )
             //->to('fdn@ros-telematika.ru')
             ->subject('Заявка с сайта: обращение в техподдержку')
             ->view('email.support');

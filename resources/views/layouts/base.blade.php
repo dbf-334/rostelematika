@@ -26,10 +26,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
     {{-- Базовые стили для всех страниц --}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
     {{-- Базовые стили модальных окон --}}
-    <link href="{{ mix('/css/modal-base-form.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/modal-base-form.css') }}" rel="stylesheet">
 
 
 
@@ -62,13 +62,13 @@
     </div>
 
     {{-- Scripts -----------------------------------------------------------------------------------------------------}}
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/widjet_bitrix.js') }}"></script> {{-- Код вставки Битрикс-виджета для онлайн чата --}}
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/widjet_bitrix.js') }}"></script> {{-- Код вставки Битрикс-виджета для онлайн чата --}}
 
     {{-- Скрипт счетчика Яндекс-Метрики.
     Использовать подключение скрипта только через шаблонизатор include, т.к. только там можно вставить номер "счетчика"
-    из БД для текущего поддомена (в упаковщике mix.js подстановка не работает).
-    @include('pages.inc.sec_yandex_metrika')--}}
+    из БД для текущего поддомена (в упаковщике mix.js подстановка не работает).--}}
+    @include('pages.inc.sec_yandex_metrika')
 
     <!-- Подгружаем JS/JQuery текущей страницы -->
     @yield('to_footer')
@@ -163,6 +163,31 @@
         }
     </script>
 
+    <script>
+        //хак для открытия модальных окон поверх других (Политика конф.) ----------------------------------------------
+        $(document).ready(function () {
+            /*var modal_lv = 0;
+            $('.modal').on('shown.bs.modal', function (e) {
+                $('.modal-backdrop:last').css('zIndex',1051+modal_lv);
+                $(e.currentTarget).css('zIndex',1052+modal_lv);
+                modal_lv++
+            });
+
+            $('.modal').on('hidden.bs.modal', function (e) {
+                modal_lv--
+            });*/
+
+            $('.modal').on('shown.bs.modal', function () {
+                $('body').addClass('modal-open');
+                // BS adds some padding-right to acomodate the scrollbar at right
+                $('body').removeAttr('style');
+            });
+
+            $(".modal [data-toggle='modal']").click(function(){
+                $(this).closest(".modal").modal('hide');
+            });
+        });
+    </script>
 
 </body>
 </html>
